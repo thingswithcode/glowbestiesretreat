@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Jost:wght@300;400&amp;display=swap');
+  </style>
+  <!-- GLOW BESTIES -->
+  <text x="160" y="34" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="400" font-size="30" fill="#B5635A" letter-spacing="3">GLOW BESTIES</text>
+  <!-- RETREATS -->
+  <text x="160" y="52" text-anchor="middle" font-family="'Jost', sans-serif" font-weight="400" font-size="12" fill="#B5635A" letter-spacing="5">RETREATS</text>
+  <!-- move · nourish · connect -->
+  <text x="160" y="70" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="300" font-style="italic" font-size="13" fill="#D4A89A" letter-spacing="1.5">move · nourish · connect</text>
+</svg>

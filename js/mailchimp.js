@@ -17,9 +17,9 @@
     // To find them: Mailchimp > Audience > Signup forms > Embedded forms
     // Copy the form action URL and extract the values.
     // ==============================================
-    var MAILCHIMP_URL = 'https://YOUR_ACCOUNT.us00.list-manage.com/subscribe/post-json';
-    var MAILCHIMP_U = 'YOUR_U_VALUE';
-    var MAILCHIMP_ID = 'YOUR_LIST_ID';
+    var MAILCHIMP_URL = 'https://gmail.us12.list-manage.com/subscribe/post';
+    var MAILCHIMP_U = 'cc3b82a425357b3fc1bb38910';
+    var MAILCHIMP_ID = 'f24cdf1cc1';
 
     function isValidEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -82,6 +82,11 @@
             return;
         }
 
+        // Disable button while submitting
+        var submitBtn = form.querySelector('.btn-submit');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Wird gesendet...';
+
         // Submit to Mailchimp via JSONP
         var callbackName = 'mailchimpCallback_' + Date.now();
         var url = MAILCHIMP_URL
@@ -91,24 +96,45 @@
             + '&FNAME=' + encodeURIComponent(name)
             + '&c=' + callbackName;
 
+        // Timeout if Mailchimp doesn't respond within 10s
+        var timeout = setTimeout(function () {
+            cleanup();
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Platz sichern';
+            showError('Verbindung fehlgeschlagen. Bitte versuche es erneut.');
+        }, 10000);
+
+        function cleanup() {
+            clearTimeout(timeout);
+            delete window[callbackName];
+            var s = document.getElementById(callbackName);
+            if (s) s.remove();
+        }
+
         window[callbackName] = function (data) {
+            cleanup();
             if (data.result === 'success') {
                 showSuccess();
             } else if (data.msg && data.msg.indexOf('already subscribed') !== -1) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Platz sichern';
                 showError('Du bist bereits angemeldet!');
             } else {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Platz sichern';
                 showError('Etwas ist schiefgelaufen. Bitte versuche es erneut.');
             }
-
-            // Cleanup
-            delete window[callbackName];
-            var script = document.getElementById(callbackName);
-            if (script) script.remove();
         };
 
         var script = document.createElement('script');
         script.id = callbackName;
         script.src = url;
+        script.onerror = function () {
+            cleanup();
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Platz sichern';
+            showError('Verbindung fehlgeschlagen. Bitte versuche es erneut.');
+        };
         document.body.appendChild(script);
     });
 

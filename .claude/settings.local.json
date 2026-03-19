@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:escapehaven.com)",
+      "WebFetch(domain:www.camp-joli.com)",
+      "WebFetch(domain:www.ouranoyoga.com)",
+      "WebFetch(domain:www.aloyoga.com)",
+      "WebFetch(domain:www.aesop.com)",
+      "WebFetch(domain:www.tanafreida.at)",
+      "WebFetch(domain:skills.sh)",
+      "Bash(gh api:*)",
+      "Bash(npx skills:*)",
+      "WebFetch(domain:tanafreida.at)",
+      "Bash(cd:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:eepurl.com)",
+      "Bash(where python:*)",
+      "WebFetch(domain:gmail.us12.list-manage.com)",
+      "Bash(python -m http.server 8000)",
+      "Bash(gh auth:*)"
+    ]
+  }
+}
