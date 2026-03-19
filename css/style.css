@@ -607,8 +607,9 @@ button:focus-visible {
     font-family: var(--font-heading);
     font-size: 1.15rem;
     font-style: italic;
-    color: var(--color-accent-light);
-    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.15em;
+    font-size: 1.3rem;
     margin-bottom: 40px;
     opacity: 0;
     transform: translateY(20px);
