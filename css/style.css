@@ -1,8 +1,13 @@
 /* ============================================
    GLOW BESTIES RETREATS — Design System
+   Luxury Wellness Editorial Aesthetic
    ============================================ */
 
-/* --- Custom Properties --- */
+
+/* ============================================
+   1. CUSTOM PROPERTIES & RESET
+   ============================================ */
+
 :root {
     /* Colors */
     --color-bg-primary: #FBF8F4;
@@ -17,6 +22,7 @@
     --color-footer-bg: #3A3531;
     --color-footer-text: #D4CFC9;
     --color-error: #C44B4B;
+    --color-border-subtle: rgba(58, 53, 49, 0.08);
 
     /* Typography */
     --font-heading: 'Cormorant Garamond', Georgia, serif;
@@ -24,20 +30,21 @@
 
     /* Spacing */
     --section-padding: 120px;
-    --section-padding-mobile: 72px;
+    --section-padding-mobile: 80px;
     --container-max: 1200px;
     --container-padding: 24px;
 
     /* Transitions */
     --transition-base: 0.3s ease;
     --transition-slow: 0.6s ease;
+    --ease-elegant: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     /* Navbar */
     --navbar-height: 90px;
     --navbar-height-mobile: 72px;
 }
 
-/* --- Reset & Base --- */
+/* --- Reset --- */
 *,
 *::before,
 *::after {
@@ -77,7 +84,21 @@ ul {
     list-style: none;
 }
 
-/* --- Typography --- */
+button {
+    font-family: inherit;
+}
+
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* ============================================
+   2. TYPOGRAPHY
+   ============================================ */
+
 h1, h2, h3 {
     font-family: var(--font-heading);
     font-weight: 400;
@@ -87,17 +108,27 @@ h1, h2, h3 {
 
 h1 {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
+    letter-spacing: -0.02em;
 }
 
 h2 {
     font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.01em;
 }
 
 h3 {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 
-/* --- Layout Utilities --- */
+p {
+    margin-bottom: 0;
+}
+
+
+/* ============================================
+   3. LAYOUT UTILITIES
+   ============================================ */
+
 .container {
     max-width: var(--container-max);
     margin: 0 auto;
@@ -155,6 +186,7 @@ h3 {
     z-index: 1;
 }
 
+/* Section labels — uppercase accent text */
 .section-label {
     display: block;
     font-family: var(--font-body);
@@ -179,7 +211,24 @@ h3 {
     text-align: center;
 }
 
-/* --- Buttons --- */
+/* Screen reader only utility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+/* ============================================
+   4. BUTTONS
+   ============================================ */
+
 .btn {
     display: inline-block;
     font-family: var(--font-body);
@@ -194,6 +243,7 @@ h3 {
     text-align: center;
     position: relative;
     overflow: hidden;
+    line-height: 1;
 }
 
 .btn-primary {
@@ -227,6 +277,24 @@ h3 {
     box-shadow: 0 8px 24px rgba(181, 99, 90, 0.2);
 }
 
+.btn-outline:active {
+    transform: translateY(0);
+}
+
+/* White outline variant for dark backgrounds */
+.btn-outline-white {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-outline-white:hover,
+.btn-outline-white:focus-visible {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--color-white);
+    transform: translateY(-2px);
+}
+
 /* Focus state for accessibility */
 .btn:focus-visible,
 a:focus-visible,
@@ -236,27 +304,11 @@ button:focus-visible {
     outline-offset: 3px;
 }
 
-/* Screen reader only utility */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
 
-/* --- Mobile section padding --- */
-@media (max-width: 768px) {
-    .section {
-        padding: var(--section-padding-mobile) 0;
-    }
-}
+/* ============================================
+   5. ARCH FRAME (reusable image component)
+   ============================================ */
 
-/* --- Arch Frame (reusable component) --- */
 .arch-frame {
     border-radius: 200px 200px 12px 12px;
     overflow: hidden;
@@ -267,7 +319,7 @@ button:focus-visible {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.7s var(--ease-elegant);
 }
 
 .arch-frame:hover img {
@@ -290,7 +342,7 @@ button:focus-visible {
 
 
 /* ============================================
-   NAVIGATION
+   6. NAVIGATION
    ============================================ */
 
 .navbar {
@@ -356,6 +408,7 @@ button:focus-visible {
     color: var(--color-accent);
 }
 
+/* Underline animation on nav links */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -364,13 +417,14 @@ button:focus-visible {
     width: 0;
     height: 1.5px;
     background-color: var(--color-accent);
-    transition: width 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: width 0.35s var(--ease-elegant);
 }
 
 .nav-links a:hover::after {
     width: 100%;
 }
 
+/* Nav CTA button */
 .nav-cta {
     padding: 10px 24px;
     border: 1.5px solid var(--color-white);
@@ -396,7 +450,37 @@ button:focus-visible {
     color: var(--color-white) !important;
 }
 
-/* Hamburger */
+/* Language switcher — very subtle */
+.nav-lang {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 4px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    transition: all var(--transition-base);
+    cursor: pointer;
+    background: none;
+}
+
+.nav-lang:hover {
+    color: rgba(255, 255, 255, 0.85);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar.scrolled .nav-lang {
+    color: var(--color-text-light);
+    border-color: var(--color-border-subtle);
+}
+
+.navbar.scrolled .nav-lang:hover {
+    color: var(--color-text-heading);
+    border-color: var(--color-text-light);
+}
+
+/* Hamburger toggle */
 .nav-toggle {
     display: none;
     background: none;
@@ -413,7 +497,7 @@ button:focus-visible {
     width: 24px;
     height: 2px;
     background-color: var(--color-white);
-    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.35s var(--ease-elegant);
 }
 
 .navbar.scrolled .hamburger,
@@ -441,7 +525,7 @@ button:focus-visible {
     top: 7px;
 }
 
-/* Hamburger open state — elegant X animation */
+/* Hamburger open state — X animation */
 .nav-toggle[aria-expanded="true"] .hamburger {
     background-color: transparent;
 }
@@ -480,17 +564,19 @@ button:focus-visible {
     .nav-links {
         position: fixed;
         top: 0;
+        left: 0;
         right: 0;
-        width: 300px;
+        bottom: 0;
+        width: 100%;
         height: 100vh;
         height: 100dvh;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 28px;
-        background-color: var(--color-bg-primary);
+        background-color: var(--color-bg-beige);
         transform: translateX(100%);
-        transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+        transition: transform 0.45s var(--ease-elegant);
         z-index: 1000;
     }
 
@@ -519,11 +605,16 @@ button:focus-visible {
         background-color: var(--color-accent);
         color: var(--color-white) !important;
     }
+
+    .nav-lang {
+        color: var(--color-text-light);
+        border-color: var(--color-border-subtle);
+    }
 }
 
 
 /* ============================================
-   HERO SECTION
+   7. HERO SECTION
    ============================================ */
 
 .hero {
@@ -571,11 +662,12 @@ button:focus-visible {
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.35em;
+    text-transform: uppercase;
     color: rgba(255, 255, 255, 0.85);
     margin-bottom: 20px;
     opacity: 0;
     transform: translateY(20px);
-    animation: heroFadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+    animation: heroFadeUp 0.9s var(--ease-elegant) 0.3s forwards;
 }
 
 .hero-title {
@@ -588,7 +680,7 @@ button:focus-visible {
     font-feature-settings: 'liga' 1, 'kern' 1;
     opacity: 0;
     transform: translateY(25px);
-    animation: heroFadeUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+    animation: heroFadeUp 1s var(--ease-elegant) 0.5s forwards;
 }
 
 .hero-subtitle {
@@ -600,20 +692,19 @@ button:focus-visible {
     line-height: 1.6;
     opacity: 0;
     transform: translateY(20px);
-    animation: heroFadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.75s forwards;
+    animation: heroFadeUp 0.9s var(--ease-elegant) 0.75s forwards;
 }
 
 .hero-tagline {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     font-style: italic;
     color: rgba(255, 255, 255, 0.9);
     letter-spacing: 0.15em;
-    font-size: 1.3rem;
     margin-bottom: 40px;
     opacity: 0;
     transform: translateY(20px);
-    animation: heroFadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.95s forwards;
+    animation: heroFadeUp 0.9s var(--ease-elegant) 0.95s forwards;
 }
 
 .hero-cta {
@@ -621,7 +712,7 @@ button:focus-visible {
     padding: 18px 52px;
     opacity: 0;
     transform: translateY(20px);
-    animation: heroFadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.15s forwards;
+    animation: heroFadeUp 0.9s var(--ease-elegant) 1.15s forwards;
 }
 
 @keyframes heroFadeUp {
@@ -659,7 +750,692 @@ button:focus-visible {
 
 
 /* ============================================
-   ÜBER UNS (ABOUT)
+   8. HOMEPAGE — INTRO SECTION
+   ============================================ */
+
+.intro-section {
+    text-align: center;
+}
+
+.intro-section .container {
+    max-width: 650px;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text-body);
+}
+
+.intro-text p {
+    margin-bottom: 20px;
+}
+
+.intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+.intro-text p:first-child {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color-text-heading);
+}
+
+
+/* ============================================
+   9. HOMEPAGE — PHILOSOPHY SECTION
+   ============================================ */
+
+.philosophy-section {
+    text-align: center;
+}
+
+.philosophy-section .container {
+    max-width: 700px;
+}
+
+.philosophy-text {
+    font-family: var(--font-heading);
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--color-text-heading);
+    letter-spacing: -0.01em;
+}
+
+.philosophy-text p {
+    margin-bottom: 24px;
+}
+
+.philosophy-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ============================================
+   10. HOMEPAGE — FOR YOU SECTION
+   ============================================ */
+
+.for-you-section {
+    text-align: center;
+}
+
+.for-you-list {
+    max-width: 600px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.for-you-item {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-text-heading);
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border-subtle);
+    letter-spacing: 0.01em;
+}
+
+.for-you-item:last-child {
+    border-bottom: none;
+}
+
+.for-you-item:first-child {
+    padding-top: 0;
+}
+
+
+/* ============================================
+   11. HOMEPAGE — EXPERIENCE GRID
+   ============================================ */
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 40px;
+}
+
+.experience-card {
+    border-top: 1.5px solid var(--color-accent-light);
+    padding-top: 24px;
+    transition: transform 0.4s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-4px);
+}
+
+.experience-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--color-text-heading);
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.experience-card-text {
+    font-size: 0.95rem;
+    color: var(--color-text-body);
+    line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}
+
+
+/* ============================================
+   12. HOMEPAGE — IMAGE BREAK
+   ============================================ */
+
+.image-break {
+    position: relative;
+    width: 100%;
+    height: clamp(320px, 55vh, 600px);
+    overflow: hidden;
+}
+
+.image-break img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-break-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(58, 53, 49, 0.05) 0%,
+        rgba(58, 53, 49, 0.35) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 var(--container-padding);
+}
+
+.image-break-text {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-white);
+    max-width: 700px;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+
+/* ============================================
+   13. HOMEPAGE — FOUNDERS PREVIEW
+   ============================================ */
+
+.founders-preview {
+    display: grid;
+    grid-template-columns: 45fr 55fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.founders-image {
+    position: relative;
+}
+
+.founders-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(58, 53, 49, 0.1);
+}
+
+.founders-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.founders-text p:last-of-type {
+    margin-bottom: 32px;
+}
+
+.founders-text p:first-of-type {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--color-text-heading);
+}
+
+@media (max-width: 768px) {
+    .founders-preview {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .founders-image {
+        order: -1;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+
+/* ============================================
+   14. HOMEPAGE — RETREAT CARD SECTION
+   ============================================ */
+
+.retreat-card-section {
+    display: grid;
+    grid-template-columns: 60fr 40fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.retreat-card-section--reversed {
+    grid-template-columns: 40fr 60fr;
+}
+
+.retreat-card-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(58, 53, 49, 0.1);
+}
+
+.retreat-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s var(--ease-elegant);
+}
+
+.retreat-card-image:hover img {
+    transform: scale(1.03);
+}
+
+.retreat-card-content {
+    padding: 20px 0;
+}
+
+.retreat-card-meta {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    margin-bottom: 12px;
+}
+
+.retreat-card-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: var(--color-text-heading);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.retreat-card-desc {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
+    color: var(--color-text-body);
+}
+
+.retreat-card-price {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--color-text-heading);
+    margin-bottom: 24px;
+}
+
+.retreat-card-price span {
+    font-size: 0.85rem;
+    font-family: var(--font-body);
+    color: var(--color-text-light);
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .retreat-card-section,
+    .retreat-card-section--reversed {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .retreat-card-image {
+        order: -1;
+    }
+}
+
+
+/* ============================================
+   15. HOMEPAGE — CTA / SIGNUP SECTION
+   ============================================ */
+
+.section-cta {
+    position: relative;
+    padding: var(--section-padding) 0;
+    overflow: hidden;
+}
+
+.section-cta::after {
+    display: none;
+}
+
+.cta-bg {
+    position: absolute;
+    inset: -20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(58, 53, 49, 0.65) 0%,
+        rgba(58, 53, 49, 0.55) 50%,
+        rgba(58, 53, 49, 0.7) 100%
+    );
+    backdrop-filter: blur(2px);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--color-white);
+    margin-bottom: 16px;
+    font-style: italic;
+    letter-spacing: -0.02em;
+}
+
+.cta-subtitle {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* Signup form */
+.signup-form {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    flex: 1;
+    position: relative;
+}
+
+/* Glassmorphism inputs */
+.signup-form input[type="text"],
+.signup-form input[type="email"] {
+    width: 100%;
+    padding: 15px 22px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    outline: none;
+    transition: border-color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.signup-form input[type="text"]::placeholder,
+.signup-form input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: 300;
+}
+
+.signup-form input[type="text"]:focus,
+.signup-form input[type="email"]:focus {
+    border-color: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.14);
+    box-shadow: 0 0 20px rgba(212, 168, 154, 0.15);
+    outline: none;
+}
+
+/* Input error state */
+.signup-form input.error {
+    border-color: rgba(244, 164, 164, 0.6);
+}
+
+.form-error {
+    display: block;
+    font-size: 0.8rem;
+    color: #F4A4A4;
+    margin-top: 6px;
+    padding-left: 20px;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.form-checkbox input[type="checkbox"] {
+    margin-top: 4px;
+    accent-color: var(--color-accent);
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.form-checkbox label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.form-checkbox label a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color var(--transition-base);
+}
+
+.form-checkbox label a:hover {
+    color: var(--color-white);
+}
+
+.btn-submit {
+    width: 100%;
+    max-width: 280px;
+    font-size: 1rem;
+    padding: 16px 40px;
+}
+
+.form-note {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 12px;
+}
+
+.signup-success {
+    padding: 20px;
+}
+
+.success-message {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+
+/* ============================================
+   16. HOMEPAGE — INSTAGRAM SECTION
+   ============================================ */
+
+.instagram-section {
+    text-align: center;
+}
+
+.instagram-section .section-title {
+    font-style: italic;
+}
+
+.instagram-subtitle {
+    font-size: 1rem;
+    color: var(--color-text-body);
+    margin-bottom: 40px;
+}
+
+/* Offset collage layout — overlapping images */
+.instagram-collage {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    height: 500px;
+}
+
+.instagram-collage-item {
+    position: absolute;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(58, 53, 49, 0.1);
+    transition: transform 0.5s var(--ease-elegant), box-shadow 0.5s ease;
+}
+
+.instagram-collage-item:hover {
+    transform: scale(1.04) rotate(0deg) !important;
+    box-shadow: 0 20px 60px rgba(58, 53, 49, 0.18);
+    z-index: 3;
+}
+
+.instagram-collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.instagram-collage-item:nth-child(1) {
+    width: 280px;
+    height: 350px;
+    top: 20px;
+    left: 0;
+    transform: rotate(-3deg);
+    z-index: 2;
+}
+
+.instagram-collage-item:nth-child(2) {
+    width: 300px;
+    height: 380px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(1deg);
+    z-index: 1;
+}
+
+.instagram-collage-item:nth-child(3) {
+    width: 260px;
+    height: 330px;
+    top: 40px;
+    right: 0;
+    transform: rotate(2.5deg);
+    z-index: 2;
+}
+
+/* Fallback standard grid layout */
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.instagram-item {
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.4s var(--ease-elegant), box-shadow 0.4s ease;
+}
+
+.instagram-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(58, 53, 49, 0.12);
+}
+
+.instagram-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.4s ease;
+}
+
+.instagram-item:hover img {
+    filter: brightness(1.05);
+}
+
+.instagram-handle {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-text-body);
+    transition: color var(--transition-base);
+}
+
+.instagram-handle:hover {
+    color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .instagram-collage {
+        height: 320px;
+    }
+
+    .instagram-collage-item:nth-child(1) {
+        width: 160px;
+        height: 200px;
+        top: 20px;
+        left: 0;
+    }
+
+    .instagram-collage-item:nth-child(2) {
+        width: 180px;
+        height: 230px;
+        top: 0;
+    }
+
+    .instagram-collage-item:nth-child(3) {
+        width: 150px;
+        height: 190px;
+        top: 30px;
+        right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-collage {
+        height: 260px;
+    }
+
+    .instagram-collage-item:nth-child(1) {
+        width: 130px;
+        height: 170px;
+    }
+
+    .instagram-collage-item:nth-child(2) {
+        width: 150px;
+        height: 200px;
+    }
+
+    .instagram-collage-item:nth-child(3) {
+        width: 120px;
+        height: 160px;
+    }
+}
+
+
+/* ============================================
+   17. HOMEPAGE — ABOUT GRID (used on homepage)
    ============================================ */
 
 .about-grid {
@@ -707,7 +1483,7 @@ button:focus-visible {
 
 
 /* ============================================
-   ACTIVITIES (WAS DICH ERWARTET)
+   18. ACTIVITIES (WAS DICH ERWARTET)
    ============================================ */
 
 .activities-grid {
@@ -773,7 +1549,7 @@ button:focus-visible {
 
 
 /* ============================================
-   ABLAUF (SCHEDULE)
+   19. SCHEDULE SECTION
    ============================================ */
 
 .schedule-layout {
@@ -957,7 +1733,7 @@ button:focus-visible {
 
 
 /* ============================================
-   RETREAT ERLEBNIS (HIGHLIGHTS)
+   20. HIGHLIGHTS SECTION
    ============================================ */
 
 .highlights-grid {
@@ -1046,7 +1822,7 @@ button:focus-visible {
 
 
 /* ============================================
-   TANAFREIDA (LOCATION)
+   21. LOCATION SECTION (TANAFREIDA)
    ============================================ */
 
 .location-layout {
@@ -1096,7 +1872,7 @@ button:focus-visible {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.7s var(--ease-elegant);
 }
 
 .gallery-small:hover img {
@@ -1126,241 +1902,358 @@ button:focus-visible {
 
 
 /* ============================================
-   INSTAGRAM
+   22. ABOUT PAGE — HERO
    ============================================ */
 
-.instagram-section {
+.about-hero {
+    background-color: var(--color-bg-beige);
+    padding: calc(var(--navbar-height) + 80px) 0 100px;
     text-align: center;
 }
 
-.instagram-section .section-title {
-    font-style: italic;
+.about-hero .container {
+    max-width: 700px;
 }
 
-.instagram-subtitle {
-    font-size: 1rem;
+.about-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    color: var(--color-text-heading);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.about-hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.8;
     color: var(--color-text-body);
-    margin-bottom: 40px;
-}
-
-.instagram-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-bottom: 40px;
-}
-
-.instagram-item {
-    aspect-ratio: 1 / 1;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
-}
-
-.instagram-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 24px rgba(58, 53, 49, 0.12);
-}
-
-.instagram-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: filter 0.4s ease;
-}
-
-.instagram-item:hover img {
-    filter: brightness(1.05);
 }
 
 @media (max-width: 768px) {
-    .instagram-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .about-hero {
+        padding: calc(var(--navbar-height-mobile) + 48px) 0 72px;
     }
 }
 
 
 /* ============================================
-   CTA / SIGNUP SECTION
+   23. ABOUT PAGE — FOUNDER SECTION
    ============================================ */
 
-.section-cta {
+.founder-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.founder-section--mirrored {
+    direction: rtl;
+}
+
+.founder-section--mirrored > * {
+    direction: ltr;
+}
+
+.founder-image {
     position: relative;
-    padding: var(--section-padding) 0;
+}
+
+.founder-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(58, 53, 49, 0.1);
+}
+
+.founder-name {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--color-text-heading);
+    margin-bottom: 8px;
+}
+
+.founder-role {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 24px;
+    display: block;
+}
+
+.founder-text p {
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.founder-text p:last-child {
+    margin-bottom: 0;
+}
+
+.founder-quote {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--color-text-heading);
+    padding-left: 20px;
+    border-left: 2px solid var(--color-accent-light);
+    margin-top: 24px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .founder-section,
+    .founder-section--mirrored {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        direction: ltr;
+    }
+
+    .founder-image {
+        order: -1;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+
+/* ============================================
+   24. ABOUT PAGE — MINI CTA
+   ============================================ */
+
+.mini-cta {
+    text-align: center;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.mini-cta-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--color-text-heading);
+    margin-bottom: 16px;
+}
+
+.mini-cta-text {
+    font-size: 1rem;
+    color: var(--color-text-body);
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+
+/* ============================================
+   25. RETREATS PAGE — HERO
+   ============================================ */
+
+.retreat-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     overflow: hidden;
 }
 
-.section-cta::after {
-    display: none;
-}
-
-.cta-bg {
+.retreat-hero .hero-bg {
     position: absolute;
-    inset: -20px;
+    inset: -40px;
     background-size: cover;
     background-position: center;
 }
 
-.cta-overlay {
+.retreat-hero .hero-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
-        135deg,
-        rgba(58, 53, 49, 0.65) 0%,
-        rgba(58, 53, 49, 0.55) 50%,
-        rgba(58, 53, 49, 0.7) 100%
+        to bottom,
+        rgba(58, 53, 49, 0.15) 0%,
+        rgba(58, 53, 49, 0.45) 100%
     );
-    backdrop-filter: blur(2px);
 }
 
-.cta-content {
+.retreat-hero .hero-content {
     position: relative;
     z-index: 2;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 700px;
+    padding: 0 var(--container-padding);
 }
 
-.cta-title {
+.retreat-hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
     color: var(--color-white);
-    margin-bottom: 16px;
-    font-style: italic;
     letter-spacing: -0.02em;
-}
-
-.cta-subtitle {
-    font-size: 1.05rem;
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.7;
-    margin-bottom: 40px;
-}
-
-.signup-form {
-    max-width: 480px;
-    margin: 0 auto;
-}
-
-.form-row {
-    display: flex;
-    gap: 12px;
     margin-bottom: 16px;
 }
 
-.form-group {
-    flex: 1;
-    position: relative;
-}
-
-/* Glassmorphism inputs */
-.signup-form input[type="text"],
-.signup-form input[type="email"] {
-    width: 100%;
-    padding: 15px 22px;
+.retreat-hero-subtitle {
     font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 300;
-    color: var(--color-white);
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 50px;
-    outline: none;
-    transition: border-color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
-.signup-form input[type="text"]::placeholder,
-.signup-form input[type="email"]::placeholder {
-    color: rgba(255, 255, 255, 0.45);
-    font-weight: 300;
-}
-
-.signup-form input[type="text"]:focus,
-.signup-form input[type="email"]:focus {
-    border-color: rgba(255, 255, 255, 0.55);
-    background: rgba(255, 255, 255, 0.14);
-    box-shadow: 0 0 20px rgba(212, 168, 154, 0.15);
-    outline: none;
-}
-
-.form-error {
-    display: block;
-    font-size: 0.8rem;
-    color: #F4A4A4;
-    margin-top: 6px;
-    padding-left: 20px;
-}
-
-.form-checkbox {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 24px;
-    text-align: left;
-}
-
-.form-checkbox input[type="checkbox"] {
-    margin-top: 4px;
-    accent-color: var(--color-accent);
-    flex-shrink: 0;
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-}
-
-.form-checkbox label {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.5;
-    cursor: pointer;
-}
-
-.form-checkbox label a {
     color: rgba(255, 255, 255, 0.9);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    transition: color var(--transition-base);
+    line-height: 1.6;
 }
 
-.form-checkbox label a:hover {
-    color: var(--color-white);
+
+/* ============================================
+   26. RETREATS PAGE — INTRO
+   ============================================ */
+
+.retreat-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
 }
 
-.btn-submit {
-    width: 100%;
-    max-width: 280px;
-    font-size: 1rem;
-    padding: 16px 40px;
+.retreat-intro-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
 }
 
-.form-note {
+.retreat-intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+.retreat-intro-text p:first-child {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--color-text-heading);
+}
+
+.retreat-intro-details {
+    background-color: var(--color-bg-beige);
+    border-radius: 12px;
+    padding: 40px;
+}
+
+.retreat-detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.retreat-detail-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.retreat-detail-item:first-child {
+    padding-top: 0;
+}
+
+.retreat-detail-label {
     font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.5);
-    margin-top: 12px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-light);
 }
 
-.signup-success {
-    padding: 20px;
-}
-
-.success-message {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-style: italic;
-    color: var(--color-white);
+.retreat-detail-value {
+    font-weight: 400;
+    color: var(--color-text-heading);
+    text-align: right;
 }
 
 @media (max-width: 768px) {
-    .form-row {
-        flex-direction: column;
+    .retreat-intro {
+        grid-template-columns: 1fr;
+        gap: 48px;
     }
 }
 
 
 /* ============================================
-   FOOTER
+   27. RETREATS PAGE — LOCATION GALLERY
+   ============================================ */
+
+.location-section .location-gallery-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 320px 200px;
+    gap: 16px;
+}
+
+.location-gallery-showcase .gallery-hero {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(58, 53, 49, 0.1);
+}
+
+.location-gallery-showcase .gallery-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.location-gallery-showcase .gallery-thumb {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(58, 53, 49, 0.08);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.location-gallery-showcase .gallery-thumb:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(58, 53, 49, 0.14);
+}
+
+.location-gallery-showcase .gallery-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s var(--ease-elegant);
+}
+
+.location-gallery-showcase .gallery-thumb:hover img {
+    transform: scale(1.06);
+}
+
+@media (max-width: 768px) {
+    .location-section .location-gallery-showcase {
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px repeat(3, 180px);
+    }
+
+    .location-gallery-showcase .gallery-hero {
+        grid-column: 1;
+    }
+}
+
+
+/* ============================================
+   28. RETREATS PAGE — SCHEDULE
+   ============================================ */
+
+.schedule-section .schedule-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.schedule-section .schedule-intro p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text-body);
+}
+
+
+/* ============================================
+   29. FOOTER
    ============================================ */
 
 .footer {
@@ -1374,6 +2267,13 @@ button:focus-visible {
     align-items: center;
     text-align: center;
     gap: 24px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }
 
 .footer-logo {
@@ -1392,6 +2292,13 @@ button:focus-visible {
     display: block;
     margin-top: 4px;
     letter-spacing: 0.08em;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
 }
 
 .footer-links {
@@ -1452,6 +2359,11 @@ button:focus-visible {
     color: var(--color-white);
 }
 
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
 .footer-social a {
     color: var(--color-footer-text);
     transition: color var(--transition-base), transform var(--transition-base);
@@ -1469,15 +2381,28 @@ button:focus-visible {
     margin-top: 8px;
 }
 
+@media (max-width: 768px) {
+    .footer {
+        padding: 48px 0 24px;
+    }
+
+    .footer-links,
+    .footer-legal {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
 
 /* ============================================
-   SCROLL ANIMATIONS
+   30. SCROLL ANIMATIONS
    ============================================ */
 
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: opacity 0.8s var(--ease-elegant), transform 0.8s var(--ease-elegant);
 }
 
 .fade-in.visible {
@@ -1501,7 +2426,25 @@ button:focus-visible {
 .highlight-card.fade-in:nth-child(5) { transition-delay: 0.28s; }
 .highlight-card.fade-in:nth-child(6) { transition-delay: 0.35s; }
 
-/* About section — text slides from left, image from right */
+/* Staggered delay for experience cards */
+.experience-card.fade-in:nth-child(1) { transition-delay: 0s; }
+.experience-card.fade-in:nth-child(2) { transition-delay: 0.06s; }
+.experience-card.fade-in:nth-child(3) { transition-delay: 0.12s; }
+.experience-card.fade-in:nth-child(4) { transition-delay: 0.18s; }
+.experience-card.fade-in:nth-child(5) { transition-delay: 0.24s; }
+.experience-card.fade-in:nth-child(6) { transition-delay: 0.3s; }
+
+/* Staggered delay for for-you items */
+.for-you-item.fade-in:nth-child(1) { transition-delay: 0s; }
+.for-you-item.fade-in:nth-child(2) { transition-delay: 0.06s; }
+.for-you-item.fade-in:nth-child(3) { transition-delay: 0.12s; }
+.for-you-item.fade-in:nth-child(4) { transition-delay: 0.18s; }
+.for-you-item.fade-in:nth-child(5) { transition-delay: 0.24s; }
+.for-you-item.fade-in:nth-child(6) { transition-delay: 0.3s; }
+.for-you-item.fade-in:nth-child(7) { transition-delay: 0.36s; }
+.for-you-item.fade-in:nth-child(8) { transition-delay: 0.42s; }
+
+/* Directional reveals */
 .about-text.fade-in {
     transform: translateX(-30px);
 }
@@ -1516,7 +2459,6 @@ button:focus-visible {
     transform: translateX(0);
 }
 
-/* Location section — similar directional reveals */
 .location-text.fade-in {
     transform: translateX(-25px);
 }
@@ -1528,6 +2470,27 @@ button:focus-visible {
     transform: translateX(25px);
 }
 .location-gallery.fade-in.visible {
+    transform: translateX(0);
+}
+
+.founders-image.fade-in {
+    transform: translateX(-30px);
+}
+.founders-image.fade-in.visible {
+    transform: translateX(0);
+}
+
+.founders-text.fade-in {
+    transform: translateX(30px);
+}
+.founders-text.fade-in.visible {
+    transform: translateX(0);
+}
+
+.founder-image.fade-in {
+    transform: translateX(-30px);
+}
+.founder-image.fade-in.visible {
     transform: translateX(0);
 }
 
@@ -1553,11 +2516,18 @@ button:focus-visible {
     .chevron {
         animation: none;
     }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
 }
 
 
 /* ============================================
-   LEGAL PAGES (Impressum / Datenschutz)
+   31. LEGAL PAGES (Impressum / Datenschutz)
    ============================================ */
 
 .legal-page {
@@ -1583,5 +2553,110 @@ button:focus-visible {
     font-size: 0.85rem;
     margin-top: 48px;
     padding-top: 24px;
-    border-top: 1px solid rgba(58, 53, 49, 0.08);
+    border-top: 1px solid var(--color-border-subtle);
+}
+
+
+/* ============================================
+   32. GLOBAL RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+    .section {
+        padding: var(--section-padding-mobile) 0;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+    }
+
+    h2 {
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+    }
+
+    .section-title {
+        margin-bottom: 32px;
+    }
+
+    .btn {
+        padding: 14px 32px;
+        font-size: 0.85rem;
+    }
+
+    .legal-page {
+        padding-top: calc(var(--navbar-height-mobile) + 40px);
+    }
+
+    .legal-page h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    :root {
+        --container-padding: 20px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .section-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+    }
+
+    .btn {
+        padding: 13px 28px;
+        font-size: 0.82rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.2rem, 10vw, 3rem);
+    }
+
+    .hero-cta {
+        padding: 15px 36px;
+        font-size: 0.9rem;
+    }
+
+    .cta-title {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    .about-hero {
+        padding: calc(var(--navbar-height-mobile) + 36px) 0 56px;
+    }
+
+    .founder-section,
+    .founder-section--mirrored {
+        gap: 36px;
+    }
+
+    .retreat-intro-details {
+        padding: 28px;
+    }
+
+    .intro-text p:first-child {
+        font-size: 1.05rem;
+    }
+
+    .philosophy-text {
+        font-size: 1.15rem;
+    }
+
+    .for-you-item {
+        font-size: 1rem;
+    }
+
+    .founders-preview {
+        gap: 36px;
+    }
+
+    .retreat-card-section,
+    .retreat-card-section--reversed {
+        gap: 28px;
+    }
 }
