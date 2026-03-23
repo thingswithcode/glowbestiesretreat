@@ -8,7 +8,7 @@
     var strings = {
         en: {
             sending: 'Sending...',
-            submit: 'Secure your spot',
+            submit: 'Join the Retreat',
             errorEmail: 'Please enter a valid email address.',
             errorConsent: 'Please agree to the privacy policy.',
             errorConnection: 'Connection failed. Please try again.',
@@ -17,7 +17,7 @@
         },
         de: {
             sending: 'Wird gesendet...',
-            submit: 'Platz sichern',
+            submit: 'Zum Retreat anmelden',
             errorEmail: 'Bitte gib eine gültige E-Mail-Adresse ein.',
             errorConsent: 'Bitte stimme der Datenschutzerklärung zu.',
             errorConnection: 'Verbindung fehlgeschlagen. Bitte versuche es erneut.',

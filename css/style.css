@@ -202,6 +202,10 @@ p {
     text-align: center;
 }
 
+.section-label-light {
+    color: rgba(255, 255, 255, 0.75);
+}
+
 .section-title {
     margin-bottom: 40px;
     letter-spacing: -0.01em;
@@ -675,7 +679,6 @@ button:focus-visible {
     font-size: clamp(3rem, 7vw, 5rem);
     font-weight: 300;
     margin-bottom: 20px;
-    font-style: italic;
     letter-spacing: -0.02em;
     font-feature-settings: 'liga' 1, 'kern' 1;
     opacity: 0;
@@ -798,7 +801,6 @@ button:focus-visible {
     font-family: var(--font-heading);
     font-size: clamp(1.3rem, 2.5vw, 1.7rem);
     font-weight: 400;
-    font-style: italic;
     line-height: 1.6;
     color: var(--color-text-heading);
     letter-spacing: -0.01em;
@@ -854,7 +856,7 @@ button:focus-visible {
 
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 48px 40px;
 }
 
@@ -880,13 +882,6 @@ button:focus-visible {
     font-size: 0.95rem;
     color: var(--color-text-body);
     line-height: 1.65;
-}
-
-@media (max-width: 1024px) {
-    .experience-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px 36px;
-    }
 }
 
 @media (max-width: 600px) {
@@ -1127,7 +1122,6 @@ button:focus-visible {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     color: var(--color-white);
     margin-bottom: 16px;
-    font-style: italic;
     letter-spacing: -0.02em;
 }
 
@@ -1275,7 +1269,6 @@ button:focus-visible {
 }
 
 .instagram-section .section-title {
-    font-style: italic;
 }
 
 .instagram-subtitle {
@@ -1585,7 +1578,6 @@ button:focus-visible {
 .schedule-day-title {
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    font-style: italic;
     color: var(--color-text-heading);
     margin-bottom: 24px;
     padding-bottom: 12px;
@@ -1835,7 +1827,16 @@ button:focus-visible {
 .location-desc {
     font-size: 1.05rem;
     line-height: 1.8;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
+    text-align: center;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.location-cta-wrapper {
+    text-align: center;
+    margin-top: 40px;
 }
 
 .location-gallery {
@@ -1928,6 +1929,14 @@ button:focus-visible {
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--color-text-body);
+}
+
+.about-hero-subtitle p {
+    margin-bottom: 20px;
+}
+
+.about-hero-subtitle p:last-child {
+    margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
@@ -2034,7 +2043,6 @@ button:focus-visible {
 .mini-cta-title {
     font-family: var(--font-heading);
     font-size: 1.8rem;
-    font-style: italic;
     color: var(--color-text-heading);
     margin-bottom: 16px;
 }
@@ -2129,6 +2137,13 @@ button:focus-visible {
     font-size: 1.1rem;
     font-weight: 400;
     color: var(--color-text-heading);
+}
+
+.retreat-intro-image img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 420px;
 }
 
 .retreat-intro-details {
