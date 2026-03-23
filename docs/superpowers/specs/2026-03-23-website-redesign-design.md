@@ -40,10 +40,10 @@ Full rewrite of HTML and CSS. The current site structure is too different from t
 
 ### Navigation
 - **Position:** Sticky top, transparent over hero, solid beige on scroll
-- **Left:** Logo (SVG text mark, transparent background)
+- **Left:** Logo (`images/Neu/neu_v2/logo.svg`, transparent background)
 - **Center/Right links:** Retreats | About
 - **Far right:** DE/EN toggle (very subtle, small text) | "Join the Retreat" button (terracotta, prominent but elegant, rounded)
-- **Mobile:** Hamburger menu
+- **Mobile:** Hamburger menu → full-screen overlay (beige background, centered links, includes Retreats, About, DE/EN toggle, and "Join the Retreat" button). Closes on link click or X button.
 
 ---
 
@@ -88,7 +88,7 @@ See Navigation section above.
 
 ### 2. Hero
 - **Layout:** Fullscreen (100vh) background image with centered text overlay
-- **Image:** `images/Neu/neu_v2/WhatsApp Image 2026-03-22 at 09.20.55.jpeg` (golden-hour yoga on mountain)
+- **Image:** Rename `images/Neu/neu_v2/WhatsApp Image 2026-03-22 at 09.20.55.jpeg` → `images/hero-yoga.jpg` during implementation (spaces in filenames are fragile in CSS/HTML). Golden-hour yoga on mountain.
 - **Overlay:** Subtle dark gradient for text legibility
 - **Content (centered):**
   - Headline (large serif): "Reconnect with yourself - without leaving your ambition behind."
@@ -162,7 +162,7 @@ See Navigation section above.
 ### 8. Founders Preview
 - **Background:** White
 - **Layout:** Two-column - image left (~45%), text right. Stacks on mobile.
-- **Image:** Leonie & Eli together (`images/LeonieEli.jpeg` or the food bowl photo)
+- **Image:** Leonie & Eli together (`images/LeonieEli.jpeg`)
 - **Label:** "ABOUT US"
 - **Headline (serif):** "Two friends. One shared reality."
 - **Text (3-4 lines):**
@@ -193,7 +193,7 @@ See Navigation section above.
 ### 11. Instagram
 - **Background:** White/beige
 - **Inspired by Cal Reiet:** offset collage layout
-- **Layout:** 2-3 images overlapping slightly, editorial offset arrangement (not a flat grid)
+- **Layout:** 2-3 images from existing set (`images/instagram-1.jpg`, `images/instagram-2.jpg`, `images/instagram-3.jpg`), overlapping slightly in editorial offset arrangement (not a flat grid)
 - **Label (uppercase, spaced):** "INSTAGRAM"
 - **Headline (large serif):** "Join us on Instagram and explore the retreat."
 - **Handle:** @theglowbesties
@@ -227,7 +227,7 @@ Shares nav and footer with homepage.
 ### Section 2: Eli
 - **Background:** White
 - **Layout:** Two-column - image left, text right
-- **Image:** Eli solo photo from `images/Neu/neu_v2/` (user will upload as "eli")
+- **Image:** `images/Neu/neu_v2/Eli.jpeg`
 - **Headline (serif):** "Eli"
 - **Text:**
   > I've always been a variety person. In fitness, in life, in everything. For me it's never just been about the physical. Moving my body is how I find mental balance and actually recharge.
@@ -239,7 +239,7 @@ Shares nav and footer with homepage.
 ### Section 3: Leonie
 - **Background:** Beige
 - **Layout:** Two-column - text left, image right (mirrored for visual rhythm)
-- **Image:** Leonie solo photo from `images/Neu/neu_v2/` (user will upload as "leonie")
+- **Image:** `images/Neu/neu_v2/Leonie.jpeg`
 - **Headline (serif):** "Leonie"
 - **Text:**
   > I've always been driven by performance - in my career and in sports.
@@ -272,7 +272,10 @@ Shares nav and footer with homepage.
 ### Section 2: About the Retreat
 - **Background:** White
 - **Layout:** Two-column - text left, image right
-- **Short intro text** about what this specific retreat offers
+- **Content:**
+  > Three days in the Austrian Alps - designed to help you slow down, move your body, and reconnect with yourself.
+  >
+  > This retreat combines intentional movement, nervous system recovery, and nourishing gluten-free meals in a small, intimate group of women. No rigid schedules, no pressure - just space to feel like yourself again.
 - **Tags:** Movement · Nourishment · Connection
 
 ### Section 3: The Location
@@ -287,17 +290,42 @@ Shares nav and footer with homepage.
 - **Background:** White
 - **Label:** "THE SCHEDULE"
 - **Headline (serif):** "Your Weekend"
-- **Detailed day-by-day timeline** (carried over from current site, translated to English):
-  - Friday: Arrive & Unwind
-  - Saturday: Explore & Connect
-  - Sunday: Reflect & Recharge
+- **Detailed day-by-day timeline** (translated to English from current `index.html` lines 135-274):
+
+  **Friday - Arrive & Unwind**
+  - From 15:00 — Soft Arrival (Protein drink & matcha)
+  - 17:30 — Arrive in Your Body (Gentle yoga)
+  - 18:15 — Guided Journaling
+  - 19:00 — Welcome Dinner (Cook & enjoy together)
+  - 20:30 — Guided Meditation
+
+  **Saturday - Explore & Connect**
+  - 07:30 — Morning Mobility & Gua Sha Routine
+  - 09:00 — Breakfast together
+  - 10:00 — Mountain Hike
+  - 12:30 — Mountain Picnic (Lunch with a view)
+  - 14:30 — Free Flow Time (Sauna, walk, or just talk)
+  - 19:00 — Shared Dinner
+  - 20:30 — Breathwork Session
+  - 21:30 — Girls' Night (Games, good conversations & a glass of wine)
+
+  **Sunday - Reflect & Recharge**
+  - 08:00 — Pilates or Morning Run (You choose)
+  - 09:00 — Breakfast together
+  - 10:30 — Longevity Talk (Guest speaker)
+  - 11:30 — Closing Journaling
+  - 12:30 — Lunch together & Checkout
+
 - **Note:** "The schedule may adapt based on weather and the group. Flexibility is part of it."
 - Editorial styling - clean timeline, not cramped
 
 ### Section 5: CTA
-- Full-width background image with overlay
+- Same layout and copy as Homepage Section 10 (full-width background image `images/cta-background.jpg` with dark overlay)
+- Serif headline: "Join us."
+- Subline: "Limited spots available."
 - Signup form (same Mailchimp integration)
-- "Secure your spot"
+- Submit button (terracotta): "Secure your spot"
+- Note: "You'll receive all details via email."
 
 ---
 
@@ -309,6 +337,7 @@ Shares nav and footer with homepage.
 - **Behavior:** Clicking swaps all text content, stores preference in localStorage
 - **German translations:** Hand-written, natural German (not machine translated)
 - **Scope:** All three pages (homepage, about, retreats)
+- **Alt text:** English-only (not translated). Only visible text content is toggled.
 
 ---
 
@@ -337,8 +366,9 @@ Shares nav and footer with homepage.
 
 ### Image Handling
 - Use existing images where they fit
-- Hero: `images/Neu/neu_v2/WhatsApp Image 2026-03-22 at 09.20.55.jpeg`
-- Founder photos: from `images/Neu/neu_v2/` (eli and leonie uploads)
+- Hero: rename `images/Neu/neu_v2/WhatsApp Image 2026-03-22 at 09.20.55.jpeg` → `images/hero-yoga.jpg`
+- Founder photos: `images/Neu/neu_v2/Eli.jpeg`, `images/Neu/neu_v2/Leonie.jpeg`
+- Logo: `images/Neu/neu_v2/logo.svg`
 - Location: existing Tanafreida photos
 - Lazy loading on all images below the fold
 - `object-fit: cover` for consistent framing
