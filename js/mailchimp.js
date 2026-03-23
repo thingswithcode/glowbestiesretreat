@@ -5,6 +5,32 @@
 (function () {
     'use strict';
 
+    var strings = {
+        en: {
+            sending: 'Sending...',
+            submit: 'Secure your spot',
+            errorEmail: 'Please enter a valid email address.',
+            errorConsent: 'Please agree to the privacy policy.',
+            errorConnection: 'Connection failed. Please try again.',
+            errorSubscribed: 'You are already subscribed!',
+            errorGeneric: 'Something went wrong. Please try again.'
+        },
+        de: {
+            sending: 'Wird gesendet...',
+            submit: 'Platz sichern',
+            errorEmail: 'Bitte gib eine gültige E-Mail-Adresse ein.',
+            errorConsent: 'Bitte stimme der Datenschutzerklärung zu.',
+            errorConnection: 'Verbindung fehlgeschlagen. Bitte versuche es erneut.',
+            errorSubscribed: 'Du bist bereits angemeldet!',
+            errorGeneric: 'Etwas ist schiefgelaufen. Bitte versuche es erneut.'
+        }
+    };
+
+    function t(key) {
+        var lang = document.documentElement.lang || 'en';
+        return (strings[lang] && strings[lang][key]) || strings.en[key];
+    }
+
     var form = document.getElementById('signup-form');
     var successEl = document.getElementById('signup-success');
     var emailError = document.getElementById('email-error');
@@ -68,24 +94,24 @@
 
         // Validation
         if (!email) {
-            showError('Bitte gib eine gültige E-Mail-Adresse ein.');
+            showError(t('errorEmail'));
             return;
         }
 
         if (!isValidEmail(email)) {
-            showError('Bitte gib eine gültige E-Mail-Adresse ein.');
+            showError(t('errorEmail'));
             return;
         }
 
         if (!consent) {
-            showError('Bitte stimme der Datenschutzerklärung zu.');
+            showError(t('errorConsent'));
             return;
         }
 
         // Disable button while submitting
         var submitBtn = form.querySelector('.btn-submit');
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Wird gesendet...';
+        submitBtn.textContent = t('sending');
 
         // Submit to Mailchimp via JSONP
         var callbackName = 'mailchimpCallback_' + Date.now();
@@ -100,8 +126,8 @@
         var timeout = setTimeout(function () {
             cleanup();
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Platz sichern';
-            showError('Verbindung fehlgeschlagen. Bitte versuche es erneut.');
+            submitBtn.textContent = t('submit');
+            showError(t('errorConnection'));
         }, 10000);
 
         function cleanup() {
@@ -117,12 +143,12 @@
                 showSuccess();
             } else if (data.msg && data.msg.indexOf('already subscribed') !== -1) {
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Platz sichern';
-                showError('Du bist bereits angemeldet!');
+                submitBtn.textContent = t('submit');
+                showError(t('errorSubscribed'));
             } else {
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Platz sichern';
-                showError('Etwas ist schiefgelaufen. Bitte versuche es erneut.');
+                submitBtn.textContent = t('submit');
+                showError(t('errorGeneric'));
             }
         };
 
@@ -132,8 +158,8 @@
         script.onerror = function () {
             cleanup();
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Platz sichern';
-            showError('Verbindung fehlgeschlagen. Bitte versuche es erneut.');
+            submitBtn.textContent = t('submit');
+            showError(t('errorConnection'));
         };
         document.body.appendChild(script);
     });
