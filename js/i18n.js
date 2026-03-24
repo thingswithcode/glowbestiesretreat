@@ -7,31 +7,31 @@
             'nav.retreats': 'Retreats',
             'nav.about': '\u00DCber uns',
             'nav.lang': 'EN',
-            'nav.cta': 'Zum Retreat',
+            'nav.cta': 'Zur Warteliste',
 
             // ── Hero (index.html) ──
-            'hero.title': 'Finde zur\u00FCck zu dir selbst \u2014 ohne deine Ambitionen aufzugeben.',
+            'hero.title': 'Finde zur\u00FCck zu dir selbst \u2013 ohne deine Ambitionen aufzugeben.',
             'hero.subtitle': 'Ein Raum, um zur Ruhe zu kommen und dich wieder wie du selbst zu f\u00FChlen.',
-            'hero.cta': 'Zum Retreat',
+            'hero.cta': 'Zur Warteliste',
 
             // ── Intro ──
             'intro.label': 'UNSERE GESCHICHTE',
-            'intro.p1': 'Glow Besties ist ein Raum f\u00FCr Frauen, die es gewohnt sind, zu performen \u2014 im Job, im Sport, im Alltag.',
-            'intro.p2': 'Unsere Retreats helfen dir, runterzufahren, dein Nervensystem zu regulieren und wieder in Kontakt mit deinem K\u00F6rper zu kommen \u2014 ohne Struktur oder Ehrgeiz zu verlieren.',
+            'intro.p1': 'Glow Besties ist ein Raum f\u00FCr Frauen, die es gewohnt sind, zu performen \u2013 im Job, im Sport, im Alltag.',
+            'intro.p2': 'Unsere Retreats helfen dir, runterzufahren, dein Nervensystem zu regulieren und wieder in Kontakt mit deinem K\u00F6rper zu kommen \u2013 ohne Struktur oder Ehrgeiz zu verlieren.',
             'intro.p3': 'Verankert in Bewegung, Ern\u00E4hrung und echter Erholung konzentrieren wir uns auf das, was dir langfristig wirklich guttut.',
 
             // ── Philosophy ──
             'philosophy.label': 'UNSERE PHILOSOPHIE',
             'philosophy.title': 'Gemacht f\u00FCrs echte Leben.',
             'philosophy.p1': 'Hier geht es nicht darum, vor deinem Alltag zu fliehen. Sondern darum, dich in deinem Alltag besser zu f\u00FChlen.',
-            'philosophy.p2': 'Wir setzen auf Langlebigkeit, Nervensystem-Balance und nachhaltige Routinen \u2014 durch Bewegung, Ern\u00E4hrung und bewusste Pausen.',
+            'philosophy.p2': 'Wir setzen auf Langlebigkeit, Nervensystem-Balance und nachhaltige Routinen \u2013 durch Bewegung, Ern\u00E4hrung und bewusste Pausen.',
             'philosophy.p3': 'Weniger Druck. Mehr Klarheit. Ein K\u00F6rper, der sich wirklich gut anf\u00FChlt.',
 
             // ── For You ──
             'foryou.label': 'F\u00DCR DICH',
             'foryou.title': 'Das ist f\u00FCr dich, wenn\u2026',
             'foryou.item1': 'du immer \u201Ean\u201C bist und es dir schwer f\u00E4llt, abzuschalten',
-            'foryou.item2': 'du dich st\u00E4ndig pushst \u2014 im Job, beim Training, im Alltag',
+            'foryou.item2': 'du dich st\u00E4ndig pushst \u2013 im Job, beim Training, im Alltag',
             'foryou.item3': 'du dich nicht nur funktionieren, sondern wirklich gut f\u00FChlen willst',
             'foryou.item4': 'dir deine langfristige Gesundheit und Energie wichtig sind',
             'foryou.item5': 'du Bewegung liebst und gerne an deine Grenzen gehst',
@@ -59,7 +59,7 @@
             // ── Founders Preview (index.html) ──
             'founders.label': '\u00DCBER UNS',
             'founders.title': 'Zwei Freundinnen. Eine gemeinsame Realit\u00E4t.',
-            'founders.text': 'Wir sind seit \u00FCber 15 Jahren beste Freundinnen \u2014 obwohl wir selten am selben Ort gelebt haben. Was uns verbindet, ist ein gemeinsamer Lebensstil: schnelle Karrieren, hohe Erwartungen und das st\u00E4ndige Gef\u00FChl, performen zu m\u00FCssen.',
+            'founders.text': 'Wir sind seit \u00FCber 15 Jahren beste Freundinnen \u2013 obwohl wir selten am selben Ort gelebt haben. Was uns verbindet, ist ein gemeinsamer Lebensstil: schnelle Karrieren, hohe Erwartungen und das st\u00E4ndige Gef\u00FChl, performen zu m\u00FCssen.',
             'founders.cta': 'Unsere Geschichte lesen',
 
             // ── Retreat Card (index.html) ──
@@ -70,11 +70,11 @@
             'retreat.cta': 'Retreat ansehen',
 
             // ── CTA Section ──
-            'cta.title': 'Sei dabei.',
-            'cta.subtitle': 'Begrenzte Pl\u00E4tze verf\u00FCgbar.',
+            'cta.title': 'Bleib dran.',
+            'cta.subtitle': 'Unser Montafon Retreat ist ausgebucht! Weitere Retreats sind in Planung - melde dich an und erfahre es als Erste.',
             'cta.name_placeholder': 'Dein Name',
             'cta.email_placeholder': 'Deine E-Mail',
-            'cta.submit': 'Zum Retreat anmelden',
+            'cta.submit': 'Auf die Warteliste',
             'cta.note': 'Du erh\u00E4ltst alle Details per E-Mail.',
             'cta.success': 'Du bist dabei! Wir melden uns bald bei dir.',
             'cta.consent': 'Ich stimme der Verarbeitung meiner Daten gem\u00E4\u00DF der <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerkl\u00E4rung</a> zu.',
@@ -118,7 +118,7 @@
 
             // ── About: CTA ──
             'about.cta.title': 'Willst du dabei sein?',
-            'about.cta.button': 'Zum Retreat',
+            'about.cta.button': 'Zur Warteliste',
 
             // ── Retreats Page: Hero ──
             'retreat.hero.label': 'RETREATS',
@@ -126,8 +126,8 @@
             'retreat.hero.subtitle': '29. \u2013 31. Mai 2026',
 
             // ── Retreats Page: Intro ──
-            'retreat.intro.p1': 'Drei Tage in den \u00F6sterreichischen Alpen \u2014 um runterzufahren, deinen K\u00F6rper zu bewegen und wieder zu dir selbst zu finden.',
-            'retreat.intro.p2': 'Dieses Retreat kombiniert bewusste Bewegung, Nervensystem-Erholung und n\u00E4hrende glutenfreie Mahlzeiten in einer kleinen, intimen Frauengruppe. Kein starrer Zeitplan, kein Druck \u2014 nur Raum, um dich wieder wie du selbst zu f\u00FChlen.',
+            'retreat.intro.p1': 'Drei Tage in den \u00F6sterreichischen Alpen \u2013 um runterzufahren, deinen K\u00F6rper zu bewegen und wieder zu dir selbst zu finden.',
+            'retreat.intro.p2': 'Dieses Retreat kombiniert bewusste Bewegung, Nervensystem-Erholung und n\u00E4hrende glutenfreie Mahlzeiten in einer kleinen, intimen Frauengruppe. Kein starrer Zeitplan, kein Druck \u2013 nur Raum, um dich wieder wie du selbst zu f\u00FChlen.',
             'retreat.intro.tags': 'Bewegung \u00B7 Ern\u00E4hrung \u00B7 Verbindung',
 
             // ── Retreats Page: Location ──
@@ -141,7 +141,7 @@
             'retreat.schedule.title': 'Dein Wochenende',
 
             // Friday
-            'retreat.schedule.friday.title': 'Freitag \u2014 Ankommen & Runterkommen',
+            'retreat.schedule.friday.title': 'Freitag \u2013 Ankommen & Runterkommen',
             'retreat.schedule.friday.t1.time': 'Ab 15:00',
             'retreat.schedule.friday.t1.name': 'Entspanntes Ankommen',
             'retreat.schedule.friday.t1.desc': 'Protein-Drink & Matcha',
@@ -159,7 +159,7 @@
             'retreat.schedule.friday.t5.name': 'Gef\u00FChrte Meditation',
 
             // Saturday
-            'retreat.schedule.saturday.title': 'Samstag \u2014 Entdecken & Verbinden',
+            'retreat.schedule.saturday.title': 'Samstag \u2013 Entdecken & Verbinden',
             'retreat.schedule.saturday.t1.time': '07:30',
             'retreat.schedule.saturday.t1.tag': 'Move',
             'retreat.schedule.saturday.t1.name': 'Morning Mobility & Gua-Sha-Routine',
@@ -188,7 +188,7 @@
             'retreat.schedule.saturday.t8.desc': 'Spiele, gute Gespr\u00E4che & ein Glas Wein',
 
             // Sunday
-            'retreat.schedule.sunday.title': 'Sonntag \u2014 Reflektieren & Auftanken',
+            'retreat.schedule.sunday.title': 'Sonntag \u2013 Reflektieren & Auftanken',
             'retreat.schedule.sunday.t1.time': '08:00',
             'retreat.schedule.sunday.t1.tag': 'Move',
             'retreat.schedule.sunday.t1.name': 'Pilates oder Morning Run',
