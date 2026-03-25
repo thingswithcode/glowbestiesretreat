@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Glow Besties Retreats. Follow us on Instagram or sign up for our waitlist.">
+    <title>Contact | Glow Besties Retreats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/Neu/neu_v2/logo.svg" alt="Glow Besties Retreats Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="retreats.html" data-i18n="nav.retreats">Retreats</a></li>
+                <li><a href="index.html#philosophy" data-i18n="nav.philosophy">Philosophy</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                <li><a href="retreats.html#cta" class="nav-cta" data-i18n="nav.cta">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Section 1: Hero -->
+        <section class="contact-hero">
+            <div class="hero-bg" style="background-image: url('images/Neu/neu_v2/hero_contact.png');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="section-label section-label-light" data-i18n="contact.label">CONTACT</span>
+                <h1 class="hero-title" data-i18n="contact.title">Let's connect.</h1>
+                <p class="hero-subtitle" data-i18n="contact.subtitle">We'd love to hear from you.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Instagram -->
+        <section class="section section-white" id="contact-instagram">
+            <div class="container instagram-section fade-in">
+                <span class="section-label section-label-center" data-i18n="contact.insta.label">INSTAGRAM</span>
+                <h2 class="section-title section-title-center" data-i18n="contact.insta.title">Message us on Instagram</h2>
+                <p class="instagram-subtitle">
+                    <a href="https://www.instagram.com/theglowbesties/" target="_blank" rel="noopener" class="instagram-handle">@theglowbesties</a>
+                </p>
+                <div class="instagram-collage">
+                    <div class="instagram-collage-item">
+                        <img src="images/Neu/Insta/WhatsApp Image 2026-03-16 at 11.34.52.jpeg" alt="Glow Besties Instagram" loading="lazy">
+                    </div>
+                    <div class="instagram-collage-item">
+                        <img src="images/Neu/Insta/WhatsApp Image 2026-03-16 at 11.35.38.jpeg" alt="Glow Besties Instagram" loading="lazy">
+                    </div>
+                    <div class="instagram-collage-item">
+                        <img src="images/Neu/Insta/LeonieEli.jpeg" alt="Glow Besties Instagram" loading="lazy">
+                    </div>
+                </div>
+                <a href="https://www.instagram.com/theglowbesties/" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="contact.insta.cta">Follow us on Instagram</a>
+            </div>
+        </section>
+
+        <!-- Section 3: Waitlist CTA -->
+        <section class="section section-cta" id="cta">
+            <div class="cta-bg" style="background-image: url('images/cta-background.jpg');"></div>
+            <div class="cta-overlay"></div>
+            <div class="container cta-content fade-in">
+                <h2 class="cta-title" data-i18n="contact.cta.title">Be the first to know.</h2>
+                <p class="cta-subtitle" data-i18n="contact.cta.subtitle">Sign up to hear about our next retreat before anyone else.</p>
+                <form class="signup-form" id="signup-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="signup-name" class="sr-only">Name</label>
+                            <input type="text" id="signup-name" name="FNAME" placeholder="Your name" required aria-label="Your name" data-i18n-placeholder="cta.name_placeholder">
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email" class="sr-only">Email</label>
+                            <input type="email" id="signup-email" name="EMAIL" placeholder="Your email" required aria-label="Your email" data-i18n-placeholder="cta.email_placeholder">
+                            <span class="form-error" id="email-error"></span>
+                        </div>
+                    </div>
+                    <div class="form-group form-checkbox">
+                        <input type="checkbox" id="signup-consent" name="consent" required>
+                        <label for="signup-consent" data-i18n-html="cta.consent">I agree to the processing of my data in accordance with the <a href="datenschutz.html" target="_blank" rel="noopener">Privacy Policy</a>.</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit" data-i18n="cta.submit">Join the Waitlist</button>
+                    <p class="form-note" data-i18n="cta.note">You'll receive all details via email.</p>
+                </form>
+                <div class="signup-success" id="signup-success" hidden>
+                    <p class="success-message" data-i18n="cta.success">You're in! We'll be in touch soon.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo" data-i18n="footer.logo">Glow Besties Retreats</span>
+                <span class="footer-tagline" data-i18n="footer.tagline">move &middot; nourish &middot; connect</span>
+            </div>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <ul class="footer-links">
+                    <li><a href="retreats.html" data-i18n="footer.retreats">Retreats</a></li>
+                    <li><a href="about.html" data-i18n="footer.about">About</a></li>
+                    <li><a href="https://www.instagram.com/theglowbesties/" target="_blank" rel="noopener" data-i18n="footer.instagram">Instagram</a></li>
+                </ul>
+            </nav>
+            <div class="footer-legal">
+                <a href="impressum.html" data-i18n="footer.impressum">Impressum</a>
+                <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/theglowbesties/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+            </div>
+            <p class="footer-copy" data-i18n="footer.copy">&copy; 2026 Glow Besties Retreats</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/mailchimp.js"></script>
+</body>
+</html>

@@ -7,8 +7,9 @@
             'nav.retreats': 'Retreats',
             'nav.philosophy': 'Philosophie',
             'nav.about': '\u00DCber uns',
+            'nav.contact': 'Kontakt',
             'nav.lang': 'EN',
-            'nav.cta': 'Warteliste',
+            'nav.cta': 'Jetzt buchen',
 
             // ── Hero (index.html) ──
             'hero.title': 'Setze deinen K\u00F6rper zur\u00FCck - ohne dein Leben zu verlassen.',
@@ -102,6 +103,16 @@
             'footer.datenschutz': 'Datenschutz',
             'footer.copy': '\u00A9 2026 Glow Besties Retreats',
 
+            // ── Contact Page ──
+            'contact.label': 'KONTAKT',
+            'contact.title': 'Lass uns connecten.',
+            'contact.subtitle': 'Wir freuen uns von dir zu h\u00F6ren.',
+            'contact.insta.label': 'INSTAGRAM',
+            'contact.insta.title': 'Schreib uns auf Instagram',
+            'contact.insta.cta': 'Folge uns auf Instagram',
+            'contact.cta.title': 'Erfahre es als Erste.',
+            'contact.cta.subtitle': 'Melde dich an und erfahre als Erste von unserem n\u00E4chsten Retreat.',
+
             // ── About Page ──
             'about.label': '\u00DCBER UNS',
             'about.title': 'Zwei Freundinnen. Eine gemeinsame Realit\u00E4t.',
@@ -131,6 +142,7 @@
             'retreat.hero.label': 'RETREATS',
             'retreat.hero.title': 'Montafon Retreat',
             'retreat.hero.tagline': 'Bewegen. Resetten. Wiederfinden.',
+            'retreat.hero.date': '29. - 31. Mai 2026',
             'retreat.hero.cta': 'Zur Warteliste',
 
             // ── Retreats Page: Quick Facts ──
