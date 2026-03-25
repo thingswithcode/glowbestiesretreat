@@ -363,10 +363,8 @@ button:focus-visible {
 }
 
 .navbar.scrolled {
-    background-color: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 1px 20px rgba(58, 53, 49, 0.08);
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 20px rgba(58, 53, 49, 0.1);
 }
 
 .nav-container {
