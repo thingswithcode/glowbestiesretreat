@@ -142,7 +142,7 @@
             'retreat.facts.group.value': 'Klein & intim',
 
             // ── Retreats Page: Coming Soon ──
-            'retreat.comingsoon': 'Mehr kommt bald - stay tuned',
+            'retreat.comingsoon': 'Weitere Retreats in Planung - stay tuned',
 
             // ── Retreats Page: About Summary ──
             'retreat.about.label': '\u00DCBER DIESES RETREAT',
