@@ -516,6 +516,15 @@ button:focus-visible {
         letter-spacing: 0.02em;
     }
 
+    .navbar.scrolled .nav-links a {
+        color: var(--color-text-heading);
+    }
+
+    .navbar.scrolled .nav-cta {
+        border-color: var(--color-accent);
+        color: var(--color-accent) !important;
+    }
+
     .nav-links a::after {
         display: none;
     }
@@ -538,6 +547,10 @@ button:focus-visible {
 
     .nav-links a {
         font-size: 0.65rem;
+    }
+
+    .navbar.scrolled .nav-links a {
+        color: var(--color-text-heading);
     }
 
     .nav-cta {
