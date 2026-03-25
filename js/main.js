@@ -24,49 +24,6 @@
 
 
     /* --------------------------------------------------
-       2. Hamburger menu
-          - toggle .open on .nav-links
-          - toggle aria-expanded on .nav-toggle
-          - prevent body scroll when open
-          - close on nav link click
-          - close on Escape key
-    -------------------------------------------------- */
-    var navToggle = document.querySelector('.nav-toggle');
-    var navLinks  = document.querySelector('.nav-links');
-
-    function closeMenu() {
-        navToggle.setAttribute('aria-expanded', 'false');
-        navLinks.classList.remove('open');
-        document.body.style.overflow = '';
-    }
-
-    if (navToggle && navLinks) {
-        navToggle.addEventListener('click', function () {
-            var isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-            if (isOpen) {
-                closeMenu();
-            } else {
-                navToggle.setAttribute('aria-expanded', 'true');
-                navLinks.classList.add('open');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-
-        // Close when any nav link is clicked
-        navLinks.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', closeMenu);
-        });
-
-        // Close on Escape key
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-                closeMenu();
-            }
-        });
-    }
-
-
-    /* --------------------------------------------------
        3. Smooth scroll for anchor links
           Account for navbar height as offset
     -------------------------------------------------- */

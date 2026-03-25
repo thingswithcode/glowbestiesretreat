@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Montafon Retreat May 29-31, 2026 – Three days in the Austrian Alps for movement, nourishment, and real connection. Glow Besties Retreats.">
-    <title>Retreats | Glow Besties Retreats</title>
+    <meta name="description" content="Montafon Retreat May 29-31, 2026 - Movement, nourishment, and real connection in the Austrian Alps. Glow Besties Retreats.">
+    <title>Montafon Retreat | Glow Besties Retreats</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
                 <img src="images/Neu/neu_v2/logo.svg" alt="Glow Besties Retreats Logo">
@@ -23,56 +23,28 @@
                 <li><a href="index.html#philosophy" data-i18n="nav.philosophy">Philosophy</a></li>
                 <li><a href="about.html" data-i18n="nav.about">About</a></li>
                 <li><button class="nav-lang" aria-label="Switch language" data-i18n="nav.lang">DE</button></li>
-                <li><a href="#cta" class="nav-cta" data-i18n="nav.cta">Waitlist</a></li>
+                <li><a href="retreats.html#cta" class="nav-cta" data-i18n="nav.cta">Waitlist</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
 
-        <!-- Section 1: Retreat Hero (split layout) -->
-        <section class="retreat-hero-split">
-            <div class="hero-bg" style="background-image: url('images/hero-mountains.jpg');"></div>
-            <div class="hero-overlay"></div>
-            <div class="retreat-hero-layout">
-                <div class="retreat-hero-main">
-                    <span class="section-label section-label-light" data-i18n="retreat.hero.label">RETREATS</span>
-                    <h1 class="retreat-hero-title" data-i18n="retreat.hero.title">Montafon Retreat</h1>
-                    <p class="retreat-hero-tagline" data-i18n="retreat.hero.tagline">Move. Reset. Reconnect.</p>
-                    <a href="#cta" class="btn btn-primary" data-i18n="retreat.hero.cta">Join Waitlist</a>
-                    <div class="retreat-quick-facts">
-                        <div class="quick-fact">
-                            <span class="quick-fact-label" data-i18n="retreat.facts.location.label">Location</span>
-                            <span class="quick-fact-value" data-i18n="retreat.facts.location.value">Tanafreida, Montafon</span>
-                        </div>
-                        <div class="quick-fact">
-                            <span class="quick-fact-label" data-i18n="retreat.facts.duration.label">Duration</span>
-                            <span class="quick-fact-value" data-i18n="retreat.facts.duration.value">3 days / 2 nights</span>
-                        </div>
-                        <div class="quick-fact">
-                            <span class="quick-fact-label" data-i18n="retreat.facts.group.label">Group size</span>
-                            <span class="quick-fact-value" data-i18n="retreat.facts.group.value">Small &amp; intimate</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="retreat-hero-side">
-                    <div class="retreat-coming-soon">
-                        <img src="images/hero-mountains.jpg" alt="" aria-hidden="true">
-                        <div class="coming-soon-overlay">
-                            <p class="coming-soon-text" data-i18n="retreat.comingsoon">More to come soon - stay tuned</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Section 1: Hero -->
+        <section class="about-hero">
+            <div class="container">
+                <span class="section-label section-label-center" data-i18n="retreatdetail.hero.label">MONTAFON RETREAT</span>
+                <h1 class="about-hero-title" data-i18n="retreatdetail.hero.title">A few days to reset, move and reconnect</h1>
+                <p class="about-hero-subtitle fade-in" data-i18n="retreatdetail.hero.subtitle">May 29-31, 2026 | Tanafreida, Montafon</p>
             </div>
         </section>
 
-        <!-- Section 2: About this Retreat -->
-        <section class="section section-white" id="about-retreat">
+        <!-- Section 2: About -->
+        <section class="section section-white" id="about">
             <div class="container">
-                <div class="retreat-about-summary fade-in">
-                    <span class="section-label section-label-center" data-i18n="retreat.about.label">ABOUT THIS RETREAT</span>
-                    <p class="retreat-about-text" data-i18n="retreat.about.text">A few days designed to help you slow down, move your body, and reconnect with yourself - without losing your structure or ambition.</p>
-                    <a href="retreat-montafon.html" class="btn btn-outline" data-i18n="retreat.about.cta">More details</a>
+                <div class="retreat-detail-text fade-in">
+                    <p data-i18n="retreatdetail.about.p1">A few days designed to help you slow down, move your body, and reconnect with yourself - without losing your structure or ambition.</p>
+                    <p data-i18n="retreatdetail.about.p2">This retreat combines intentional movement, nervous system recovery, and nourishing gluten-free meals in a small, intimate group of women. No rigid schedules, no pressure - just space to feel like yourself again.</p>
                 </div>
             </div>
         </section>
@@ -120,12 +92,12 @@
             </div>
         </section>
 
-        <!-- Section 5: Location (shortened) -->
+        <!-- Section 5: Location -->
         <section class="section section-beige location-section" id="location">
             <div class="container">
                 <span class="section-label section-label-center" data-i18n="retreat.location.label">THE LOCATION</span>
                 <h2 class="section-title section-title-center" data-i18n="retreat.location.title">Tanafreida. Above the Montafon.</h2>
-                <p class="location-desc" data-i18n="retreat.location.desc.short">A mountain refuge at over 1,000m, surrounded by nature, meadows, and silence.</p>
+                <p class="location-desc" data-i18n="retreat.location.desc">A mountain refuge at over 1,000m, surrounded by nature, fresh mountain air and silence. Eight individually designed apartments, 40,000m&sup2; of meadows and forests, and views that make everything else fade away.</p>
 
                 <div class="location-gallery-showcase fade-in">
                     <div class="gallery-hero">
@@ -152,9 +124,11 @@
                 <h2 class="section-title section-title-center" data-i18n="foryou.title">This is for you if...</h2>
                 <ul class="for-you-list">
                     <li class="for-you-item fade-in" data-i18n="foryou.item1">you're always "on" and struggle to switch off</li>
+                    <li class="for-you-item fade-in" data-i18n="foryou.item2">you push yourself - in your career, workouts, and daily life</li>
                     <li class="for-you-item fade-in" data-i18n="foryou.item3">you want to feel better, not just function</li>
                     <li class="for-you-item fade-in" data-i18n="foryou.item4">you care about your long-term health and energy</li>
                     <li class="for-you-item fade-in" data-i18n="foryou.item5">you enjoy movement and challenge</li>
+                    <li class="for-you-item fade-in" data-i18n="foryou.item6">you're looking for real connection and a clear mind</li>
                 </ul>
             </div>
         </section>

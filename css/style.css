@@ -484,135 +484,56 @@ button:focus-visible {
     border-color: var(--color-text-light);
 }
 
-/* Hamburger toggle */
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    z-index: 1001;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: var(--color-white);
-    transition: all 0.35s var(--ease-elegant);
-}
-
-.navbar.scrolled .hamburger,
-.navbar.scrolled .hamburger::before,
-.navbar.scrolled .hamburger::after {
-    background-color: var(--color-text-heading);
-}
-
-.hamburger {
-    position: relative;
-}
-
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    position: absolute;
-    left: 0;
-}
-
-.hamburger::before {
-    top: -7px;
-}
-
-.hamburger::after {
-    top: 7px;
-}
-
-/* Hamburger open state — X animation */
-.nav-toggle[aria-expanded="true"] .hamburger {
-    background-color: transparent;
-}
-
-.nav-toggle[aria-expanded="true"] .hamburger::before {
-    top: 0;
-    transform: rotate(45deg);
-    background-color: var(--color-text-heading);
-}
-
-.nav-toggle[aria-expanded="true"] .hamburger::after {
-    top: 0;
-    transform: rotate(-45deg);
-    background-color: var(--color-text-heading);
-}
-
-/* Mobile nav overlay */
-.nav-overlay {
-    display: none;
-}
-
-/* Mobile nav */
+/* Mobile nav — always visible, no hamburger */
 @media (max-width: 768px) {
     .navbar {
         height: var(--navbar-height-mobile);
     }
 
     .nav-logo img {
-        height: 44px;
-    }
-
-    .nav-toggle {
-        display: block;
+        height: 40px;
     }
 
     .nav-links {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100vh;
-        height: 100dvh;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 28px;
-        background-color: var(--color-bg-beige);
-        transform: translateX(100%);
-        transition: transform 0.45s var(--ease-elegant);
-        z-index: 1000;
-    }
-
-    .nav-links.open {
-        transform: translateX(0);
+        gap: 14px;
     }
 
     .nav-links a {
-        color: var(--color-text-heading);
-        font-size: 1.15rem;
-        font-weight: 400;
+        font-size: 0.72rem;
         letter-spacing: 0.02em;
     }
 
     .nav-links a::after {
-        bottom: -2px;
+        display: none;
     }
 
     .nav-cta {
-        border-color: var(--color-accent);
-        color: var(--color-accent) !important;
-        margin-top: 8px;
-    }
-
-    .nav-cta:hover {
-        background-color: var(--color-accent);
-        color: var(--color-white) !important;
+        padding: 7px 14px;
+        font-size: 0.7rem;
     }
 
     .nav-lang {
-        color: var(--color-text-light);
-        border-color: var(--color-border-subtle);
+        font-size: 0.6rem;
+        padding: 3px 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 0.65rem;
+    }
+
+    .nav-cta {
+        padding: 6px 10px;
+        font-size: 0.65rem;
+    }
+
+    .nav-logo img {
+        height: 34px;
     }
 }
 
@@ -718,6 +639,18 @@ button:focus-visible {
     animation: heroFadeUp 0.9s var(--ease-elegant) 1.15s forwards;
 }
 
+.hero-trust {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 24px;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: heroFadeUp 0.9s var(--ease-elegant) 1.4s forwards;
+}
+
 @keyframes heroFadeUp {
     to {
         opacity: 1;
@@ -782,6 +715,83 @@ button:focus-visible {
     font-size: 1.2rem;
     font-weight: 400;
     color: var(--color-text-heading);
+}
+
+
+/* ============================================
+   8b. HOMEPAGE — RETREAT TEASER
+   ============================================ */
+
+.retreat-teaser {
+    position: relative;
+    width: 100%;
+    height: clamp(450px, 65vh, 700px);
+    overflow: hidden;
+}
+
+.retreat-teaser-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.retreat-teaser-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.retreat-teaser-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(58, 53, 49, 0.05) 0%, rgba(58, 53, 49, 0.55) 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 var(--container-padding) 60px;
+}
+
+.retreat-teaser-content {
+    text-align: center;
+    max-width: 600px;
+}
+
+.retreat-teaser-tagline {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+}
+
+.retreat-teaser-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    color: var(--color-white);
+    margin-bottom: 12px;
+    line-height: 1.1;
+}
+
+.retreat-teaser-date {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+    .retreat-teaser {
+        height: clamp(350px, 55vh, 500px);
+    }
+
+    .retreat-teaser-overlay {
+        padding-bottom: 40px;
+    }
 }
 
 
@@ -889,51 +899,6 @@ button:focus-visible {
         grid-template-columns: 1fr;
         gap: 36px;
     }
-}
-
-
-/* ============================================
-   12. HOMEPAGE — IMAGE BREAK
-   ============================================ */
-
-.image-break {
-    position: relative;
-    width: 100%;
-    height: clamp(320px, 55vh, 600px);
-    overflow: hidden;
-}
-
-.image-break img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.image-break-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(58, 53, 49, 0.05) 0%,
-        rgba(58, 53, 49, 0.35) 100%
-    );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 var(--container-padding);
-}
-
-.image-break-text {
-    font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    font-weight: 400;
-    font-style: italic;
-    color: var(--color-white);
-    max-width: 700px;
-    letter-spacing: -0.01em;
-    line-height: 1.3;
 }
 
 
@@ -2056,43 +2021,45 @@ button:focus-visible {
 
 
 /* ============================================
-   25. RETREATS PAGE — HERO
+   25. RETREATS PAGE — HERO (split layout)
    ============================================ */
 
-.retreat-hero {
+.retreat-hero-split {
     position: relative;
-    height: 50vh;
-    min-height: 400px;
-    max-height: 600px;
+    min-height: 70vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
     overflow: hidden;
 }
 
-.retreat-hero .hero-bg {
+.retreat-hero-split .hero-bg {
     position: absolute;
     inset: -40px;
     background-size: cover;
     background-position: center;
 }
 
-.retreat-hero .hero-overlay {
+.retreat-hero-split .hero-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(58, 53, 49, 0.15) 0%,
-        rgba(58, 53, 49, 0.45) 100%
+        rgba(58, 53, 49, 0.2) 0%,
+        rgba(58, 53, 49, 0.5) 100%
     );
 }
 
-.retreat-hero .hero-content {
+.retreat-hero-layout {
     position: relative;
     z-index: 2;
-    max-width: 700px;
-    padding: 0 var(--container-padding);
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: calc(var(--navbar-height) + 40px) var(--container-padding) 60px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 48px;
+    align-items: end;
 }
 
 .retreat-hero-title {
@@ -2101,92 +2068,161 @@ button:focus-visible {
     font-weight: 400;
     color: var(--color-white);
     letter-spacing: -0.02em;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
-.retreat-hero-subtitle {
+.retreat-hero-tagline {
     font-family: var(--font-body);
     font-size: 1.1rem;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 28px;
+    letter-spacing: 0.02em;
 }
 
-
-/* ============================================
-   26. RETREATS PAGE — INTRO
-   ============================================ */
-
-.retreat-intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-}
-
-.retreat-intro-text p {
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-
-.retreat-intro-text p:last-child {
-    margin-bottom: 0;
-}
-
-.retreat-intro-text p:first-child {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: var(--color-text-heading);
-}
-
-.retreat-intro-image img {
-    width: 100%;
-    border-radius: 12px;
-    object-fit: cover;
-    height: 420px;
-}
-
-.retreat-intro-details {
-    background-color: var(--color-bg-beige);
-    border-radius: 12px;
-    padding: 40px;
-}
-
-.retreat-detail-item {
+.retreat-quick-facts {
     display: flex;
-    justify-content: space-between;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--color-border-subtle);
+    gap: 32px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.retreat-detail-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+.quick-fact {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.retreat-detail-item:first-child {
-    padding-top: 0;
-}
-
-.retreat-detail-label {
-    font-size: 0.8rem;
+.quick-fact-label {
+    font-size: 0.65rem;
     font-weight: 500;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-text-light);
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.retreat-detail-value {
+.quick-fact-value {
+    font-size: 0.85rem;
     font-weight: 400;
-    color: var(--color-text-heading);
-    text-align: right;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Coming soon side teaser */
+.retreat-coming-soon {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 200px;
+}
+
+.retreat-coming-soon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(4px) grayscale(0.5);
+    opacity: 0.5;
+}
+
+.coming-soon-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(58, 53, 49, 0.3);
+}
+
+.coming-soon-text {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-white);
+    text-align: center;
+    padding: 16px;
+    transform: rotate(-5deg);
 }
 
 @media (max-width: 768px) {
-    .retreat-intro {
+    .retreat-hero-layout {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 32px;
+        padding-top: calc(var(--navbar-height-mobile) + 40px);
     }
+
+    .retreat-quick-facts {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .retreat-coming-soon {
+        height: 140px;
+    }
+}
+
+/* ============================================
+   26. RETREATS PAGE — ABOUT SUMMARY
+   ============================================ */
+
+.retreat-about-summary {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.retreat-about-text {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-text-heading);
+    margin-bottom: 32px;
+}
+
+/* ============================================
+   26b. RETREATS PAGE — FOOD SECTION
+   ============================================ */
+
+.food-section {
+    text-align: center;
+}
+
+.food-section .container {
+    max-width: 650px;
+}
+
+.food-desc {
+    font-family: var(--font-heading);
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-text-heading);
+}
+
+/* ============================================
+   26c. RETREAT DETAIL PAGE
+   ============================================ */
+
+.retreat-detail-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.retreat-detail-text p {
+    margin-bottom: 20px;
+}
+
+.retreat-detail-text p:last-child {
+    margin-bottom: 0;
+}
+
+.retreat-detail-text p:first-child {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color-text-heading);
 }
 
 
@@ -2247,23 +2283,6 @@ button:focus-visible {
     .location-gallery-showcase .gallery-hero {
         grid-column: 1;
     }
-}
-
-
-/* ============================================
-   28. RETREATS PAGE — SCHEDULE
-   ============================================ */
-
-.schedule-section .schedule-intro {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 60px;
-}
-
-.schedule-section .schedule-intro p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: var(--color-text-body);
 }
 
 
