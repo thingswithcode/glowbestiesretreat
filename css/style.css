@@ -363,7 +363,7 @@ button:focus-visible {
 }
 
 .navbar.scrolled {
-    background-color: #FFFFFF;
+    background-color: var(--color-bg-beige);
     box-shadow: 0 1px 20px rgba(58, 53, 49, 0.1);
 }
 
