@@ -362,7 +362,8 @@ button:focus-visible {
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-.navbar.scrolled {
+.navbar.scrolled,
+.navbar.navbar-light {
     background-color: var(--color-bg-beige);
     box-shadow: 0 1px 20px rgba(58, 53, 49, 0.1);
 }
@@ -417,7 +418,8 @@ button:focus-visible {
     position: relative;
 }
 
-.navbar.scrolled .nav-links a {
+.navbar.scrolled .nav-links a,
+.navbar.navbar-light .nav-links a {
     color: var(--color-text-heading);
 }
 
@@ -457,12 +459,14 @@ button:focus-visible {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-.navbar.scrolled .nav-cta {
+.navbar.scrolled .nav-cta,
+.navbar.navbar-light .nav-cta {
     border-color: var(--color-accent);
     color: var(--color-accent) !important;
 }
 
-.navbar.scrolled .nav-cta:hover {
+.navbar.scrolled .nav-cta:hover,
+.navbar.navbar-light .nav-cta:hover {
     background-color: var(--color-accent);
     color: var(--color-white) !important;
 }
@@ -487,12 +491,14 @@ button:focus-visible {
     border-color: rgba(255, 255, 255, 0.4);
 }
 
-.navbar.scrolled .nav-lang {
+.navbar.scrolled .nav-lang,
+.navbar.navbar-light .nav-lang {
     color: var(--color-text-light);
     border-color: var(--color-border-subtle);
 }
 
-.navbar.scrolled .nav-lang:hover {
+.navbar.scrolled .nav-lang:hover,
+.navbar.navbar-light .nav-lang:hover {
     color: var(--color-text-heading);
     border-color: var(--color-text-light);
 }
@@ -516,11 +522,13 @@ button:focus-visible {
         letter-spacing: 0.02em;
     }
 
-    .navbar.scrolled .nav-links a {
+    .navbar.scrolled .nav-links a,
+    .navbar.navbar-light .nav-links a {
         color: var(--color-text-heading);
     }
 
-    .navbar.scrolled .nav-cta {
+    .navbar.scrolled .nav-cta,
+    .navbar.navbar-light .nav-cta {
         border-color: var(--color-accent);
         color: var(--color-accent) !important;
     }
@@ -549,7 +557,8 @@ button:focus-visible {
         font-size: 0.65rem;
     }
 
-    .navbar.scrolled .nav-links a {
+    .navbar.scrolled .nav-links a,
+    .navbar.navbar-light .nav-links a {
         color: var(--color-text-heading);
     }
 
