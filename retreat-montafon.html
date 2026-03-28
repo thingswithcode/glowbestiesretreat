@@ -20,7 +20,6 @@
             </a>
             <ul class="nav-links">
                 <li><a href="retreats.html" data-i18n="nav.retreats">Retreats</a></li>
-                <li><a href="index.html#philosophy" data-i18n="nav.philosophy">Philosophy</a></li>
                 <li><a href="about.html" data-i18n="nav.about">About</a></li>
                 <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                 <li><a href="retreats.html#cta" class="nav-cta" data-i18n="nav.cta">Book Now</a></li>
@@ -39,99 +38,273 @@
             </div>
         </section>
 
-        <!-- Section 2: About -->
+        <!-- Section 2: Short Intro + Read More -->
         <section class="section section-white" id="about">
             <div class="container">
-                <div class="retreat-detail-text fade-in">
+                <div class="retreat-detail-text fade-in" style="text-align: center;">
                     <p data-i18n="retreatdetail.about.p1">A few days designed to help you slow down, move your body, and reconnect with yourself - without losing your structure or ambition.</p>
-                    <p data-i18n="retreatdetail.about.p2">This retreat combines intentional movement, nervous system recovery, and nourishing gluten-free meals in a small, intimate group of women. No rigid schedules, no pressure - just space to feel like yourself again.</p>
+                    <button class="btn btn-outline retreat-read-more" id="retreat-read-more" data-i18n="retreatdetail.readmore">Read more</button>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: What You'll Experience -->
-        <section class="section section-beige" id="experience">
-            <div class="container">
-                <span class="section-label section-label-center" data-i18n="experience.label">THE EXPERIENCE</span>
-                <h2 class="section-title section-title-center" data-i18n="experience.title">What you'll experience</h2>
-                <div class="experience-grid">
-                    <div class="experience-card fade-in">
-                        <h3 class="experience-card-title" data-i18n="experience.card1.title">Slow Mornings</h3>
-                        <p class="experience-card-text" data-i18n="retreat.exp.card1.text">Calm routines, sunlight, and space to ease into your day. Start with stretching, fresh air, and grounding rituals.</p>
-                    </div>
-                    <div class="experience-card fade-in">
-                        <h3 class="experience-card-title" data-i18n="experience.card2.title">Intentional Movement</h3>
-                        <p class="experience-card-text" data-i18n="retreat.exp.card2.text">Fascia, mobility, Pilates, hiking, and light running. Movement that challenges and restores at the same time.</p>
-                    </div>
-                    <div class="experience-card fade-in">
-                        <h3 class="experience-card-title" data-i18n="experience.card3.title">Nervous System Reset</h3>
-                        <p class="experience-card-text" data-i18n="retreat.exp.card3.text">Breathwork and guided sessions to shift out of stress mode. Learn tools you can take home with you.</p>
-                    </div>
-                    <div class="experience-card fade-in">
-                        <h3 class="experience-card-title" data-i18n="experience.card4.title">Nourishment</h3>
-                        <p class="experience-card-text" data-i18n="retreat.exp.card4.text">Fully gluten-free meals focused on balance, energy, and quality. Prepared with care and enjoyed together.</p>
-                    </div>
-                    <div class="experience-card fade-in">
-                        <h3 class="experience-card-title" data-i18n="experience.card5.title">Reflection &amp; Clarity</h3>
-                        <p class="experience-card-text" data-i18n="retreat.exp.card5.text">Journaling and guided prompts to clear your mind. Create space for the thoughts that matter.</p>
-                    </div>
-                    <div class="experience-card fade-in">
-                        <h3 class="experience-card-title" data-i18n="experience.card6.title">Real Connection</h3>
-                        <p class="experience-card-text" data-i18n="retreat.exp.card6.text">A small group, honest conversations, and shared experience. No small talk, just real moments.</p>
+        <!-- Expandable Detail Sections (hidden by default) -->
+        <div class="retreat-expandable" id="retreat-expandable">
+
+            <!-- About Detail -->
+            <section class="section section-beige" id="about-detail">
+                <div class="container">
+                    <div class="retreat-detail-text fade-in">
+                        <p data-i18n="retreatdetail.about.p2">This retreat combines intentional movement, nervous system recovery, and nourishing gluten-free meals in a small, intimate group of women. No rigid schedules, no pressure - just space to feel like yourself again.</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Section 4: Food (USP) -->
-        <section class="section section-white food-section" id="food">
-            <div class="container">
-                <span class="section-label section-label-center" data-i18n="retreat.food.label">NOURISHMENT</span>
-                <h2 class="section-title section-title-center" data-i18n="retreat.food.title">Fully gluten-free, without compromise.</h2>
-                <p class="food-desc fade-in" data-i18n="retreat.food.desc">All meals are fully gluten-free - focused on balance, quality, and enjoyment.</p>
-            </div>
-        </section>
-
-        <!-- Section 5: Location -->
-        <section class="section section-beige location-section" id="location">
-            <div class="container">
-                <span class="section-label section-label-center" data-i18n="retreat.location.label">THE LOCATION</span>
-                <h2 class="section-title section-title-center" data-i18n="retreat.location.title">Tanafreida. Above the Montafon.</h2>
-                <p class="location-desc" data-i18n="retreat.location.desc">A mountain refuge at over 1,000m, surrounded by nature, fresh mountain air and silence. Eight individually designed apartments, 40,000m&sup2; of meadows and forests, and views that make everything else fade away.</p>
-
-                <div class="location-gallery-showcase fade-in">
-                    <div class="gallery-hero">
-                        <img src="images/tanafreida-main.jpg" alt="Tanafreida main view, Montafon" loading="lazy">
-                    </div>
-                    <div class="gallery-thumb">
-                        <img src="images/tanafreida-room.jpg" alt="Tanafreida room" loading="lazy">
-                    </div>
-                    <div class="gallery-thumb">
-                        <img src="images/tanafreida-terrace.jpg" alt="Tanafreida terrace" loading="lazy">
+            <!-- What You'll Experience -->
+            <section class="section section-white" id="experience">
+                <div class="container">
+                    <span class="section-label section-label-center" data-i18n="experience.label">THE EXPERIENCE</span>
+                    <h2 class="section-title section-title-center" data-i18n="experience.title">What you'll experience</h2>
+                    <div class="experience-grid">
+                        <div class="experience-card fade-in">
+                            <h3 class="experience-card-title" data-i18n="experience.card1.title">Slow Mornings</h3>
+                            <p class="experience-card-text" data-i18n="retreat.exp.card1.text">Calm routines, sunlight, and space to ease into your day. Start with stretching, fresh air, and grounding rituals.</p>
+                        </div>
+                        <div class="experience-card fade-in">
+                            <h3 class="experience-card-title" data-i18n="experience.card2.title">Intentional Movement</h3>
+                            <p class="experience-card-text" data-i18n="retreat.exp.card2.text">Fascia, mobility, Pilates, hiking, and light running. Movement that challenges and restores at the same time.</p>
+                        </div>
+                        <div class="experience-card fade-in">
+                            <h3 class="experience-card-title" data-i18n="experience.card3.title">Nervous System Reset</h3>
+                            <p class="experience-card-text" data-i18n="retreat.exp.card3.text">Breathwork and guided sessions to shift out of stress mode. Learn tools you can take home with you.</p>
+                        </div>
+                        <div class="experience-card fade-in">
+                            <h3 class="experience-card-title" data-i18n="experience.card4.title">Nourishment</h3>
+                            <p class="experience-card-text" data-i18n="retreat.exp.card4.text">Fully gluten-free meals focused on balance, energy, and quality. Prepared with care and enjoyed together.</p>
+                        </div>
+                        <div class="experience-card fade-in">
+                            <h3 class="experience-card-title" data-i18n="experience.card5.title">Reflection &amp; Clarity</h3>
+                            <p class="experience-card-text" data-i18n="retreat.exp.card5.text">Journaling and guided prompts to clear your mind. Create space for the thoughts that matter.</p>
+                        </div>
+                        <div class="experience-card fade-in">
+                            <h3 class="experience-card-title" data-i18n="experience.card6.title">Real Connection</h3>
+                            <p class="experience-card-text" data-i18n="retreat.exp.card6.text">A small group, honest conversations, and shared experience. No small talk, just real moments.</p>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="location-cta-wrapper">
-                    <a href="https://www.tanafreida.at/" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="retreat.location.cta">More about Tanafreida</a>
+            <!-- Schedule / Timetable -->
+            <section class="section section-beige schedule-section" id="schedule">
+                <div class="container">
+                    <div class="schedule-section schedule-intro">
+                        <span class="section-label section-label-center" data-i18n="retreat.schedule.label">THE SCHEDULE</span>
+                        <h2 class="section-title section-title-center" data-i18n="retreat.schedule.title">Your Weekend</h2>
+                    </div>
+
+                    <div class="schedule-layout">
+                        <div class="schedule-days">
+
+                            <!-- Friday -->
+                            <div class="schedule-day fade-in">
+                                <h3 class="schedule-day-title" data-i18n="retreat.schedule.friday.title">Friday &ndash; Arrive &amp; Unwind</h3>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.friday.t1.time">From 15:00</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.friday.t1.name">Soft Arrival</span>
+                                            <span class="timeline-desc" data-i18n="retreat.schedule.friday.t1.desc">Protein drink &amp; matcha</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.friday.t2.time">17:30</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.friday.t2.name">Arrive in Your Body</span>
+                                            <span class="timeline-desc" data-i18n="retreat.schedule.friday.t2.desc">Gentle yoga</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.friday.t3.time">18:15</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.friday.t3.name">Guided Journaling</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.friday.t4.time">19:00</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.friday.t4.name">Welcome Dinner</span>
+                                            <span class="timeline-desc" data-i18n="retreat.schedule.friday.t4.desc">Cook &amp; enjoy together</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.friday.t5.time">20:30</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.friday.t5.name">Guided Meditation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Saturday -->
+                            <div class="schedule-day fade-in">
+                                <h3 class="schedule-day-title" data-i18n="retreat.schedule.saturday.title">Saturday &ndash; Explore &amp; Connect</h3>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.saturday.t1.time">07:30</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.saturday.t1.name">Morning Mobility &amp; Gua Sha Routine</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.saturday.t2.time">09:00</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.saturday.t2.name">Breakfast together</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.saturday.t3.time">10:00</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.saturday.t3.name">Mountain Hike</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.saturday.t4.time">12:30</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.saturday.t4.name">Mountain Picnic</span>
+                                            <span class="timeline-desc" data-i18n="retreat.schedule.saturday.t4.desc">Lunch with a view</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.saturday.t5.time">14:30</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.saturday.t5.name">Free Flow Time</span>
+                                            <span class="timeline-desc" data-i18n="retreat.schedule.saturday.t5.desc">Sauna, walk, or just talk</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.saturday.t6.time">19:00</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.saturday.t6.name">Shared Dinner</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.saturday.t7.time">20:30</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.saturday.t7.name">Breathwork Session</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.saturday.t8.time">21:30</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.saturday.t8.name">Girls&rsquo; Night</span>
+                                            <span class="timeline-desc" data-i18n="retreat.schedule.saturday.t8.desc">Games, good conversations &amp; a glass of wine</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sunday -->
+                            <div class="schedule-day fade-in">
+                                <h3 class="schedule-day-title" data-i18n="retreat.schedule.sunday.title">Sunday &ndash; Reflect &amp; Recharge</h3>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.sunday.t1.time">08:00</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.sunday.t1.name">Pilates or Morning Run</span>
+                                            <span class="timeline-desc" data-i18n="retreat.schedule.sunday.t1.desc">You choose</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.sunday.t2.time">09:00</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.sunday.t2.name">Breakfast together</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.sunday.t3.time">10:30</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.sunday.t3.name">Longevity Talk</span>
+                                            <span class="timeline-desc" data-i18n="retreat.schedule.sunday.t3.desc">Guest speaker</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.sunday.t4.time">11:30</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.sunday.t4.name">Closing Journaling</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-time" data-i18n="retreat.schedule.sunday.t5.time">12:30</span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-name" data-i18n="retreat.schedule.sunday.t5.name">Lunch together &amp; Checkout</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="schedule-note fade-in" data-i18n="retreat.schedule.note">The schedule may adapt based on weather and the group. Flexibility is part of it.</p>
+
+                        </div><!-- /.schedule-days -->
+
+                        <div class="schedule-image fade-in">
+                            <img src="images/hero-yoga.jpg" alt="Yoga in nature" loading="lazy">
+                        </div>
+                    </div><!-- /.schedule-layout -->
+
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Section 6: Who This Is For -->
-        <section class="section section-white for-you-section" id="for-you">
-            <div class="container">
-                <span class="section-label section-label-center" data-i18n="foryou.label">FOR YOU</span>
-                <h2 class="section-title section-title-center" data-i18n="foryou.title">This is for you if...</h2>
-                <ul class="for-you-list">
-                    <li class="for-you-item fade-in" data-i18n="foryou.item1">you're always "on" and struggle to switch off</li>
-                    <li class="for-you-item fade-in" data-i18n="foryou.item2">you push yourself - in your career, workouts, and daily life</li>
-                    <li class="for-you-item fade-in" data-i18n="foryou.item3">you want to feel better, not just function</li>
-                    <li class="for-you-item fade-in" data-i18n="foryou.item4">you care about your long-term health and energy</li>
-                    <li class="for-you-item fade-in" data-i18n="foryou.item5">you enjoy movement and challenge</li>
-                    <li class="for-you-item fade-in" data-i18n="foryou.item6">you're looking for real connection and a clear mind</li>
-                </ul>
-            </div>
-        </section>
+            <!-- Food (USP) -->
+            <section class="section section-white food-section" id="food">
+                <div class="container">
+                    <span class="section-label section-label-center" data-i18n="retreat.food.label">NOURISHMENT</span>
+                    <h2 class="section-title section-title-center" data-i18n="retreat.food.title">Fully gluten-free, without compromise.</h2>
+                    <p class="food-desc fade-in" data-i18n="retreat.food.desc">All meals are fully gluten-free - focused on balance, quality, and enjoyment.</p>
+                </div>
+            </section>
+
+            <!-- Location -->
+            <section class="section section-beige location-section" id="location">
+                <div class="container">
+                    <span class="section-label section-label-center" data-i18n="retreat.location.label">THE LOCATION</span>
+                    <h2 class="section-title section-title-center" data-i18n="retreat.location.title">Tanafreida. Above the Montafon.</h2>
+                    <p class="location-desc" data-i18n="retreat.location.desc">A mountain refuge at over 1,000m, surrounded by nature, fresh mountain air and silence. Eight individually designed apartments, 40,000m&sup2; of meadows and forests, and views that make everything else fade away.</p>
+
+                    <div class="location-gallery-showcase fade-in">
+                        <div class="gallery-hero">
+                            <img src="images/tanafreida-main.jpg" alt="Tanafreida main view, Montafon" loading="lazy">
+                        </div>
+                        <div class="gallery-thumb">
+                            <img src="images/tanafreida-room.jpg" alt="Tanafreida room" loading="lazy">
+                        </div>
+                        <div class="gallery-thumb">
+                            <img src="images/tanafreida-terrace.jpg" alt="Tanafreida terrace" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="location-cta-wrapper">
+                        <a href="https://www.tanafreida.at/" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="retreat.location.cta">More about Tanafreida</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Who This Is For -->
+            <section class="section section-white for-you-section" id="for-you">
+                <div class="container">
+                    <span class="section-label section-label-center" data-i18n="foryou.label">FOR YOU</span>
+                    <h2 class="section-title section-title-center" data-i18n="foryou.title">This is for you if...</h2>
+                    <ul class="for-you-list">
+                        <li class="for-you-item fade-in" data-i18n="foryou.item1">you're always "on" and struggle to switch off</li>
+                        <li class="for-you-item fade-in" data-i18n="foryou.item2">you push yourself - in your career, workouts, and daily life</li>
+                        <li class="for-you-item fade-in" data-i18n="foryou.item3">you want to feel better, not just function</li>
+                        <li class="for-you-item fade-in" data-i18n="foryou.item4">you care about your long-term health and energy</li>
+                        <li class="for-you-item fade-in" data-i18n="foryou.item5">you enjoy movement and challenge</li>
+                        <li class="for-you-item fade-in" data-i18n="foryou.item6">you're looking for real connection and a clear mind</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div><!-- /.retreat-expandable -->
 
         <!-- Section 7: CTA -->
         <section class="section section-cta" id="cta">
@@ -141,6 +314,10 @@
                 <h2 class="cta-title" data-i18n="cta.title">Stay in the loop.</h2>
                 <p class="cta-subtitle" data-i18n="cta.subtitle">Our Montafon Retreat is fully booked! More retreats are coming - sign up to be the first to know.</p>
                 <form class="signup-form" id="signup-form" novalidate>
+                    <div class="form-hp" aria-hidden="true" tabindex="-1">
+                        <label for="signup-website">Website</label>
+                        <input type="text" id="signup-website" name="website" autocomplete="off" tabindex="-1">
+                    </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="signup-name" class="sr-only">Name</label>

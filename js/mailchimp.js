@@ -88,6 +88,13 @@
         e.preventDefault();
         clearError();
 
+        // Honeypot bot check — silently block if filled
+        var honeypot = form.querySelector('#signup-website');
+        if (honeypot && honeypot.value) {
+            showSuccess();
+            return;
+        }
+
         var name = form.querySelector('#signup-name').value.trim();
         var email = form.querySelector('#signup-email').value.trim();
         var consent = form.querySelector('#signup-consent').checked;

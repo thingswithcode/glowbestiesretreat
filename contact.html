@@ -20,7 +20,6 @@
             </a>
             <ul class="nav-links">
                 <li><a href="retreats.html" data-i18n="nav.retreats">Retreats</a></li>
-                <li><a href="index.html#philosophy" data-i18n="nav.philosophy">Philosophy</a></li>
                 <li><a href="about.html" data-i18n="nav.about">About</a></li>
                 <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                 <li><a href="retreats.html#cta" class="nav-cta" data-i18n="nav.cta">Book Now</a></li>
@@ -72,6 +71,10 @@
                 <h2 class="cta-title" data-i18n="contact.cta.title">Be the first to know.</h2>
                 <p class="cta-subtitle" data-i18n="contact.cta.subtitle">Sign up to hear about our next retreat before anyone else.</p>
                 <form class="signup-form" id="signup-form" novalidate>
+                    <div class="form-hp" aria-hidden="true" tabindex="-1">
+                        <label for="signup-website">Website</label>
+                        <input type="text" id="signup-website" name="website" autocomplete="off" tabindex="-1">
+                    </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="signup-name" class="sr-only">Name</label>

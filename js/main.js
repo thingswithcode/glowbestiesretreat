@@ -94,7 +94,34 @@
 
 
     /* --------------------------------------------------
-       6. Scroll indicator — hide .hero-scroll-indicator
+       6. Retreat "Read More" expand
+    -------------------------------------------------- */
+    var readMoreBtn = document.getElementById('retreat-read-more');
+    var expandable = document.getElementById('retreat-expandable');
+
+    if (readMoreBtn && expandable) {
+        readMoreBtn.addEventListener('click', function () {
+            expandable.classList.add('is-open');
+            readMoreBtn.classList.add('is-hidden');
+            // Re-observe new fade-in elements inside the expanded section
+            if (typeof IntersectionObserver !== 'undefined') {
+                var newFades = expandable.querySelectorAll('.fade-in:not(.visible)');
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+                newFades.forEach(function (el) { obs.observe(el); });
+            }
+        });
+    }
+
+
+    /* --------------------------------------------------
+       7. Scroll indicator — hide .hero-scroll-indicator
           after scrolling past 100 px
     -------------------------------------------------- */
     var scrollIndicator = document.querySelector('.hero-scroll-indicator');
