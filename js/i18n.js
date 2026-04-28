@@ -26,7 +26,7 @@
             // ── Retreat Teaser (homepage) ──
             'retreatteaser.label': 'N\u00C4CHSTES RETREAT',
             'retreatteaser.tagline': 'Ein paar Tage zum Resetten, Bewegen und Wiederfinden',
-            'retreatteaser.title': 'Montafon Retreat',
+            'retreatteaser.title': 'The Alpine Reset',
             'retreatteaser.date': '29.-31. Mai 2026',
             'retreatteaser.cta': 'Retreat ansehen',
 
@@ -79,7 +79,7 @@
 
             // ── CTA Section ──
             'cta.title': 'Bleib dran.',
-            'cta.subtitle': 'Unser Montafon Retreat ist ausgebucht! Weitere Retreats sind in Planung - melde dich an und erfahre es als Erste.',
+            'cta.subtitle': 'The Alpine Reset ist ausgebucht! Weitere Retreats sind in Planung - melde dich an und erfahre es als Erste.',
             'cta.name_placeholder': 'Dein Name',
             'cta.email_placeholder': 'Deine E-Mail',
             'cta.submit': 'Auf die Warteliste',
@@ -140,7 +140,7 @@
 
             // ── Retreats Page: Hero ──
             'retreat.hero.label': 'RETREATS',
-            'retreat.hero.title': 'Montafon Retreat',
+            'retreat.hero.title': 'The Alpine Reset',
             'retreat.hero.tagline': 'Bewegen. Resetten. Wiederfinden.',
             'retreat.hero.date': '29. - 31. Mai 2026',
             'retreat.hero.cta': 'Zur Warteliste',
@@ -174,7 +174,7 @@
             'retreat.location.cta': 'Mehr \u00FCber Tanafreida',
 
             // ── Retreat Detail Page ──
-            'retreatdetail.hero.label': 'MONTAFON RETREAT',
+            'retreatdetail.hero.label': 'THE ALPINE RESET',
             'retreatdetail.hero.title': 'Ein paar Tage zum Resetten, Bewegen und Wiederfinden',
             'retreatdetail.hero.subtitle': '29.-31. Mai 2026 | Tanafreida, Montafon',
             'retreatdetail.about.p1': 'Ein paar Tage, die dir helfen, runterzufahren, deinen K\u00F6rper zu bewegen und wieder zu dir selbst zu finden - ohne deine Struktur oder deinen Ehrgeiz zu verlieren.',
