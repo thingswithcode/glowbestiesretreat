@@ -160,6 +160,8 @@
             'retreat.facts.duration.value': '3 Tage / 2 N\u00E4chte',
             'retreat.facts.group.label': 'Gruppengr\u00F6\u00DFe',
             'retreat.facts.group.value': 'Klein & intim',
+            'retreat.facts.food.label': 'Essen',
+            'retreat.facts.food.value': '100% Glutenfrei',
 
             // ── Retreats Page: Coming Soon ──
             'retreat.comingsoon': 'Weitere Retreats in Planung - stay tuned',
@@ -172,7 +174,7 @@
             // ── Retreats Page: Food ──
             'retreat.food.label': 'ERN\u00C4HRUNG',
             'retreat.food.title': 'Komplett glutenfrei, ohne Kompromisse.',
-            'retreat.food.desc': 'Alle Mahlzeiten sind komplett glutenfrei - mit Fokus auf Balance, Qualit\u00E4t und Genuss.',
+            'retreat.food.desc': 'Jede Mahlzeit ist zu 100% glutenfrei. Unsere Mitgr\u00FCnderin Leonie lebt mit Z\u00F6liakie, deshalb ist sicheres, glutenfreies Essen hier kein Zusatz, sondern die Grundlage. Wir passen uns jedem Ern\u00E4hrungsbed\u00FCrfnis an (vegan, vegetarisch, pescetarisch oder omnivor) - ohne Einschr\u00E4nkungen und ohne Kompromisse, nur n\u00E4hrende Mahlzeiten, gemacht f\u00FCr dich.',
 
             // ── Retreats Page: Location ──
             'retreat.location.label': 'DER ORT',
