@@ -2855,3 +2855,26 @@ button:focus-visible {
         gap: 28px;
     }
 }
+
+/* -- Gluten-Free Promise -- */
+.glutenfree-section { text-align: center; }
+.glutenfree-text { max-width: 640px; margin: 0 auto; }
+.glutenfree-badge {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.6rem 1.4rem;
+    border: 1px solid var(--color-terracotta, #c47b5a);
+    border-radius: 999px;
+    color: var(--color-terracotta, #c47b5a);
+    font-family: var(--font-sans, 'Jost', sans-serif);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.hero-glutenfree {
+    margin-top: 0.5rem;
+    font-family: var(--font-sans, 'Jost', sans-serif);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    opacity: 0.85;
+}
