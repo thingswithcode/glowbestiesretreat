@@ -8,6 +8,7 @@
             'nav.philosophy': 'Philosophie',
             'nav.about': '\u00DCber uns',
             'nav.contact': 'Kontakt',
+            'nav.journal': 'Journal',
             'nav.lang': 'EN',
             'nav.cta': 'Jetzt buchen',
 
@@ -106,6 +107,7 @@
             'footer.tagline': 'move \u00B7 nourish \u00B7 connect',
             'footer.retreats': 'Retreats',
             'footer.about': '\u00DCber uns',
+            'footer.journal': 'Journal',
             'footer.instagram': 'Instagram',
             'footer.impressum': 'Impressum',
             'footer.datenschutz': 'Datenschutz',
