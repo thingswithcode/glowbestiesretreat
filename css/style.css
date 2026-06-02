@@ -2941,3 +2941,15 @@ button:focus-visible {
 
 /* -- Experience page: zig-zag rows spacing -- */
 .exp-day-intro { max-width: 720px; margin: 1rem auto 0; text-align: center; }
+
+/* -- Experience page: illustrated agenda rows (one image per item) -- */
+.exp-agenda { display: grid; grid-template-columns: 40% 1fr; gap: 2.5rem; align-items: center; margin-top: 2.5rem; }
+.exp-agenda-img img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; display: block; }
+.exp-agenda-text .exp-agenda-step { font-family: var(--font-sans, 'Jost', sans-serif); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-terracotta, #c47b5a); display: block; margin-bottom: 0.5rem; }
+.exp-agenda-text p { font-family: var(--font-serif, 'Cormorant Garamond', serif); font-size: 1.4rem; line-height: 1.5; margin: 0; }
+.exp-agenda--mirrored .exp-agenda-img { order: 2; }
+@media (max-width: 768px) {
+    .exp-agenda { grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+    .exp-agenda--mirrored .exp-agenda-img { order: 0; }
+    .exp-agenda-img img { aspect-ratio: 3 / 2; }
+}
