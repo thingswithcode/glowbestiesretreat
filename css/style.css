@@ -2953,3 +2953,8 @@ button:focus-visible {
     .exp-agenda--mirrored .exp-agenda-img { order: 0; }
     .exp-agenda-img img { aspect-ratio: 3 / 2; }
 }
+
+/* -- Experience page: equal-size trio (room to breathe) -- */
+.exp-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 3rem; }
+.exp-trio img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 8px; display: block; }
+@media (max-width: 700px) { .exp-trio { grid-template-columns: 1fr; } }
