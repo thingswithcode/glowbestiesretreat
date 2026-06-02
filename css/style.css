@@ -2929,3 +2929,15 @@ button:focus-visible {
 .exp-quote { margin: 0; padding: 2rem; background: var(--color-white, #fff); border-radius: 12px; }
 .exp-quote p { font-family: var(--font-serif, 'Cormorant Garamond', serif); font-style: italic; font-size: 1.3rem; line-height: 1.5; margin: 0 0 1rem; }
 .exp-quote cite { font-family: var(--font-sans, 'Jost', sans-serif); font-style: normal; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
+
+/* -- Experience page: full-width image band -- */
+.exp-band { position: relative; height: 62vh; min-height: 360px; background-size: cover; background-position: center; }
+
+/* -- Experience page: asymmetric (masonry) gallery -- */
+.exp-masonry { column-count: 3; column-gap: 14px; margin-top: 3rem; }
+.exp-masonry img { width: 100%; margin: 0 0 14px; border-radius: 8px; display: block; break-inside: avoid; }
+@media (max-width: 900px) { .exp-masonry { column-count: 2; } }
+@media (max-width: 560px) { .exp-masonry { column-count: 1; } }
+
+/* -- Experience page: zig-zag rows spacing -- */
+.exp-day-intro { max-width: 720px; margin: 1rem auto 0; text-align: center; }
