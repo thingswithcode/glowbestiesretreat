@@ -2907,3 +2907,54 @@ button:focus-visible {
 .article-faq { margin-top: 3rem; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 2rem; }
 .article-faq h3 { font-family: var(--font-serif,'Cormorant Garamond',serif); font-size: 1.4rem; margin-bottom: 0.25rem; }
 .article-faq .faq-item { margin-bottom: 1.5rem; }
+
+/* -- Experience page: day blocks -- */
+.exp-day { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 3rem; }
+.exp-day + .exp-day { margin-top: 4rem; }
+.exp-day-image img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px; display: block; }
+.exp-day-text h3 { font-family: var(--font-serif, 'Cormorant Garamond', serif); font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 1rem; }
+.exp-day-text p { font-size: 1.05rem; line-height: 1.7; }
+.exp-day--mirrored .exp-day-image { order: 2; }
+@media (max-width: 768px) {
+    .exp-day { grid-template-columns: 1fr; gap: 1.5rem; }
+    .exp-day--mirrored .exp-day-image { order: 0; }
+}
+
+/* -- Experience page: gallery -- */
+.exp-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 3rem; }
+.exp-gallery img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 8px; display: block; }
+
+/* -- Experience page: testimonials -- */
+.exp-testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.exp-quote { margin: 0; padding: 2rem; background: var(--color-white, #fff); border-radius: 12px; }
+.exp-quote p { font-family: var(--font-serif, 'Cormorant Garamond', serif); font-style: italic; font-size: 1.3rem; line-height: 1.5; margin: 0 0 1rem; }
+.exp-quote cite { font-family: var(--font-sans, 'Jost', sans-serif); font-style: normal; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
+
+/* -- Experience page: full-width image band -- */
+.exp-band { position: relative; height: 62vh; min-height: 360px; background-size: cover; background-position: center; }
+
+/* -- Experience page: asymmetric (masonry) gallery -- */
+.exp-masonry { column-count: 3; column-gap: 14px; margin-top: 3rem; }
+.exp-masonry img { width: 100%; margin: 0 0 14px; border-radius: 8px; display: block; break-inside: avoid; }
+@media (max-width: 900px) { .exp-masonry { column-count: 2; } }
+@media (max-width: 560px) { .exp-masonry { column-count: 1; } }
+
+/* -- Experience page: zig-zag rows spacing -- */
+.exp-day-intro { max-width: 720px; margin: 1rem auto 0; text-align: center; }
+
+/* -- Experience page: illustrated agenda rows (one image per item) -- */
+.exp-agenda { display: grid; grid-template-columns: 40% 1fr; gap: 2.5rem; align-items: center; margin-top: 2.5rem; }
+.exp-agenda-img img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; display: block; }
+.exp-agenda-text .exp-agenda-step { font-family: var(--font-sans, 'Jost', sans-serif); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-terracotta, #c47b5a); display: block; margin-bottom: 0.5rem; }
+.exp-agenda-text p { font-family: var(--font-serif, 'Cormorant Garamond', serif); font-size: 1.4rem; line-height: 1.5; margin: 0; }
+.exp-agenda--mirrored .exp-agenda-img { order: 2; }
+@media (max-width: 768px) {
+    .exp-agenda { grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+    .exp-agenda--mirrored .exp-agenda-img { order: 0; }
+    .exp-agenda-img img { aspect-ratio: 3 / 2; }
+}
+
+/* -- Experience page: equal-size trio (room to breathe) -- */
+.exp-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 3rem; }
+.exp-trio img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 8px; display: block; }
+@media (max-width: 700px) { .exp-trio { grid-template-columns: 1fr; } }

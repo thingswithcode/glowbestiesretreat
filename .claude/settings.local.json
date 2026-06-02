@@ -17,7 +17,8 @@
       "Bash(where python:*)",
       "WebFetch(domain:gmail.us12.list-manage.com)",
       "Bash(python -m http.server 8000)",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "Bash(python -c \":*)"
     ]
   }
 }

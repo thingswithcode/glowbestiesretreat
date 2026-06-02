@@ -4,7 +4,7 @@
   <url><loc>https://glowbestiesretreats.com/</loc><lastmod>2026-06-01</lastmod><priority>1.0</priority></url>
   <url><loc>https://glowbestiesretreats.com/about.html</loc><lastmod>2026-06-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://glowbestiesretreats.com/retreats.html</loc><lastmod>2026-06-01</lastmod><priority>0.9</priority></url>
-  <url><loc>https://glowbestiesretreats.com/retreat-montafon.html</loc><lastmod>2026-06-01</lastmod><priority>0.9</priority></url>
+  <url><loc>https://glowbestiesretreats.com/experience.html</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
   <url><loc>https://glowbestiesretreats.com/contact.html</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://glowbestiesretreats.com/impressum.html</loc><lastmod>2026-06-01</lastmod><priority>0.3</priority></url>
   <url><loc>https://glowbestiesretreats.com/datenschutz.html</loc><lastmod>2026-06-01</lastmod><priority>0.3</priority></url>
@@ -79,5 +79,125 @@
     <loc>https://glowbestiesretreats.com/blog/de/women-only-retreat.html</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/women-only-retreat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/women-only-retreat.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/eating-out-gluten-free.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/eating-out-gluten-free.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/glutenfrei-auswaerts-essen.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/de/glutenfrei-auswaerts-essen.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/eating-out-gluten-free.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/glutenfrei-auswaerts-essen.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/hidden-gluten-everyday.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/hidden-gluten-everyday.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/verstecktes-gluten-alltag.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/de/verstecktes-gluten-alltag.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/hidden-gluten-everyday.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/verstecktes-gluten-alltag.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/gluten-free-high-protein.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/gluten-free-high-protein.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/glutenfrei-proteinreich.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/de/glutenfrei-proteinreich.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/gluten-free-high-protein.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/glutenfrei-proteinreich.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/regulate-your-nervous-system.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/regulate-your-nervous-system.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/nervensystem-regulieren.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/de/nervensystem-regulieren.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/regulate-your-nervous-system.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/nervensystem-regulieren.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/sunday-scaries.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/sunday-scaries.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/sonntagabend-angst.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/de/sonntagabend-angst.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/sunday-scaries.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/sonntagabend-angst.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/rest-without-guilt.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/rest-without-guilt.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/pausen-ohne-schlechtes-gewissen.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/de/pausen-ohne-schlechtes-gewissen.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/rest-without-guilt.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/pausen-ohne-schlechtes-gewissen.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/longevity-for-women.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/longevity-for-women.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/longevity-fuer-frauen.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/de/longevity-fuer-frauen.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/longevity-for-women.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/longevity-fuer-frauen.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/strength-training-women-longevity.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/strength-training-women-longevity.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/krafttraining-frauen-longevity.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/de/krafttraining-frauen-longevity.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/strength-training-women-longevity.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/krafttraining-frauen-longevity.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/gua-sha-and-fascia.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/gua-sha-and-fascia.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/gua-sha-faszientraining.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/de/gua-sha-faszientraining.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/gua-sha-and-fascia.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/gua-sha-faszientraining.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/hiking-as-a-reset.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/hiking-as-a-reset.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/wandern-als-reset.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/de/wandern-als-reset.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/hiking-as-a-reset.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/wandern-als-reset.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/why-we-are-fully-gluten-free.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/why-we-are-fully-gluten-free.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/warum-komplett-glutenfrei.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/de/warum-komplett-glutenfrei.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/why-we-are-fully-gluten-free.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/warum-komplett-glutenfrei.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/going-to-a-retreat-alone.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/going-to-a-retreat-alone.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/solo-frauen-retreat.html"/>
+  </url>
+  <url>
+    <loc>https://glowbestiesretreats.com/blog/de/solo-frauen-retreat.html</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glowbestiesretreats.com/blog/going-to-a-retreat-alone.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://glowbestiesretreats.com/blog/de/solo-frauen-retreat.html"/>
   </url>
 </urlset>
