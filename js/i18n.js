@@ -9,6 +9,7 @@
             'nav.about': '\u00DCber uns',
             'nav.contact': 'Kontakt',
             'nav.journal': 'Journal',
+            'nav.experience': 'Erlebnis',
             'nav.lang': 'EN',
             'nav.cta': 'Jetzt buchen',
 
@@ -108,6 +109,7 @@
             'footer.retreats': 'Retreats',
             'footer.about': '\u00DCber uns',
             'footer.journal': 'Journal',
+            'footer.experience': 'Erlebnis',
             'footer.instagram': 'Instagram',
             'footer.impressum': 'Impressum',
             'footer.datenschutz': 'Datenschutz',
@@ -190,7 +192,37 @@
             'retreatdetail.hero.title': 'Ein paar Tage zum Resetten, Bewegen und Wiederfinden',
             'retreatdetail.hero.subtitle': '29.-31. Mai 2026 | Tanafreida, Montafon',
             'retreatdetail.about.p1': 'Ein paar Tage, die dir helfen, runterzufahren, deinen K\u00F6rper zu bewegen und wieder zu dir selbst zu finden - ohne deine Struktur oder deinen Ehrgeiz zu verlieren.',
-            'retreatdetail.about.p2': 'Dieses Retreat kombiniert bewusste Bewegung, Nervensystem-Erholung und n\u00E4hrende glutenfreie Mahlzeiten in einer kleinen, intimen Frauengruppe. Kein starrer Zeitplan, kein Druck - nur Raum, um dich wieder wie du selbst zu f\u00FChlen.'
+            'retreatdetail.about.p2': 'Dieses Retreat kombiniert bewusste Bewegung, Nervensystem-Erholung und n\u00E4hrende glutenfreie Mahlzeiten in einer kleinen, intimen Frauengruppe. Kein starrer Zeitplan, kein Druck - nur Raum, um dich wieder wie du selbst zu f\u00FChlen.',
+
+            // \u2500\u2500 Experience Page \u2500\u2500
+            'exp.hero.label': 'DAS ERLEBNIS',
+            'exp.hero.title': 'Das erste Alpine Reset',
+            'exp.hero.subtitle': 'Drei Tage in den \u00F6sterreichischen Alpen. So hat es sich angef\u00FChlt.',
+            'exp.intro.label': 'MAI 2026',
+            'exp.intro.p1': 'Zw\u00F6lf Frauen, ein Bergrefugium \u00FCber dem Montafon und drei Tage ohne Programm au\u00DFer einem: runterkommen. Unser erstes Alpine Reset ist vorbei, und es war alles, was wir uns erhofft hatten.',
+            'exp.intro.p2': 'Das hier ist ein R\u00FCckblick auf diese Tage, und ein Vorgeschmack auf das, was beim n\u00E4chsten Mal auf dich wartet.',
+            'exp.day.label': 'EIN TAG IN DEN ALPEN',
+            'exp.day.title': 'Wie das Wochenende verlief',
+            'exp.day1.title': 'Ankommen und der erste Abend',
+            'exp.day1.text': 'Wir kamen an, als das Nachmittagslicht weicher wurde \u00FCber dem Tal. Ein Welcome Drink, eine Goodie Bag, ein langsames erstes Abendessen mit Glowing Bowls, und genau die Gespr\u00E4che, die leicht beginnen, wenn niemand in Eile ist. Bis zur Nacht f\u00FChlten sich Fremde schon wie Freundinnen an.',
+            'exp.day2.title': 'Bewegen und resetten',
+            'exp.day2.text': 'Der Samstag war das Herzst\u00FCck. Eine sanfte Morgenaktivierung, eine lange Wanderung in die Berge und Zeit, einfach die Luft hier oben zu atmen. Zur\u00FCck kamen wir zu einem Sunset-BBQ, versammelten uns ums Feuer f\u00FCr eine Meditation und lie\u00DFen den Tag mit Journaling unter den Sternen ausklingen.',
+            'exp.day3.title': 'Glow und Abschied',
+            'exp.day3.text': 'Der letzte Morgen begann langsam, mit Stretching und Faszienarbeit, dann eine Pilates-Einheit und ein n\u00E4hrender Brunch. Wir schlossen im Kreis, sagten, was wir mit nach Hause nehmen, und gingen leichter, als wir gekommen waren.',
+            'exp.gallery.label': 'MOMENTE',
+            'exp.gallery.title': 'Ein paar Momente vom Wochenende',
+            'exp.quotes.label': 'IN IHREN WORTEN',
+            'exp.quotes.title': 'Was die M\u00E4dels gesagt haben',
+            'exp.quote1.text': 'Ich kam an, ohne jemanden zu kennen, und ging mit einer Gruppe von Frauen, die ich in meinem Leben behalten m\u00F6chte.',
+            'exp.quote1.name': '[Vorname]',
+            'exp.quote2.text': 'Drei Tage, die meinen Kopf wirklich zur Ruhe gebracht haben. Ich kam leichter nach Hause.',
+            'exp.quote2.name': '[Vorname]',
+            'exp.quote3.text': 'Alles war glutenfrei, und ich musste mir kein einziges Mal Sorgen ums Essen machen. Allein das war unbezahlbar.',
+            'exp.quote3.name': '[Vorname]',
+            'exp.closing.title': 'Das Gef\u00FChl, das bleibt',
+            'exp.closing.text': 'Bewegung, echte Ern\u00E4hrung und Verbindung, die l\u00E4nger h\u00E4lt als ein Wochenende. Jede Mahlzeit war komplett glutenfrei, jeder Moment daf\u00FCr gemacht, dass du dich wieder wie du selbst f\u00FChlst. Das ist, was wir schaffen, und wir w\u00FCrden uns freuen, wenn du beim n\u00E4chsten Mal dabei bist.',
+            'exp.cta.title': 'Sei beim n\u00E4chsten Mal dabei',
+            'exp.cta.button': 'Zur Warteliste'
         }
     };
 
