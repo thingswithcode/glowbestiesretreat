@@ -257,6 +257,8 @@
             'exp.ag.u3.text': 'Eine Longevity-Speakerin dar\u00fcber, wie man sich langfristig gut f\u00fchlt.',
             'exp.ag.u4.label': 'Pilates Sculpt',
             'exp.ag.u4.text': 'Und wir endeten stark mit einer Pilates-Sculpt-Einheit mit Eli.',
+            'exp.ag.u5.label': 'Abschied',
+            'exp.ag.u5.text': 'Und zum Schluss ein gemeinsames Gruppenfoto. Genau diese Frauen haben das Alpine Reset zu dem gemacht, was es war.',
             'exp.pause.label': 'RAUM ZUM ATMEN',
             'exp.pause.title': 'Zeit, einfach nichts zu tun',
             'exp.pause.text': 'Wir haben viel geplant, und die Pausen gleich mit. Zwischen den Sessions war immer Raum, um in der Wiese zu ruhen, ein bisschen zu schlendern oder einfach mit der Aussicht zu sitzen. Diese ruhigen Momente z\u00e4hlten genauso viel wie alles auf dem Plan.',
