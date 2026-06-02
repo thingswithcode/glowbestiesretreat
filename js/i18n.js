@@ -11,13 +11,13 @@
             'nav.journal': 'Journal',
             'nav.experience': 'Erlebnis',
             'nav.lang': 'EN',
-            'nav.cta': 'Jetzt buchen',
+            'nav.cta': 'Stay Tuned',
 
             // ── Hero (index.html) ──
             'hero.title': 'Setze deinen K\u00F6rper zur\u00FCck - ohne dein Leben zu verlassen.',
             'hero.subtitle': 'Strukturierte Retreats f\u00FCr Frauen, die viel leisten und einen Reset brauchen, der wirklich wirkt.',
-            'hero.cta': 'Zur Warteliste',
-            'hero.trust': 'Erstes Retreat: Montafon, Mai 2026 | Ausgebucht',
+            'hero.cta': 'Erfahre es als Erste',
+            'hero.trust': 'Unser erstes Retreat ist gelaufen. Das n\u00e4chste kommt.',
 
             // ── Intro ──
             'intro.label': 'UNSER KONZEPT',
@@ -80,11 +80,11 @@
             'founders.cta': '\u00DCber uns',
 
             // ── CTA Section ──
-            'cta.title': 'Bleib dran.',
-            'cta.subtitle': 'The Alpine Reset ist ausgebucht! Weitere Retreats sind in Planung - melde dich an und erfahre es als Erste.',
+            'cta.title': 'Stay tuned f\u00fcrs n\u00e4chste Retreat.',
+            'cta.subtitle': 'Unser erstes Retreat ist gelaufen. Trag dich ein und erfahre als Erste, wenn wir das n\u00e4chste planen.',
             'cta.name_placeholder': 'Dein Name',
             'cta.email_placeholder': 'Deine E-Mail',
-            'cta.submit': 'Auf die Warteliste',
+            'cta.submit': 'Erfahre es als Erste',
             'cta.note': 'Du erh\u00E4ltst alle Details per E-Mail.',
             'cta.success': 'Du bist dabei! Wir melden uns bald bei dir.',
             'cta.consent': 'Ich stimme der Verarbeitung meiner Daten gem\u00E4\u00DF der <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerkl\u00E4rung</a> zu.',
@@ -155,7 +155,7 @@
             'retreat.hero.title': 'The Alpine Reset',
             'retreat.hero.tagline': 'Bewegen. Resetten. Wiederfinden.',
             'retreat.hero.date': '29. - 31. Mai 2026',
-            'retreat.hero.cta': 'Zur Warteliste',
+            'retreat.hero.cta': 'Erfahre es als Erste',
 
             // ── Retreats Page: Quick Facts ──
             'retreat.facts.location.label': 'Ort',
@@ -169,6 +169,7 @@
 
             // ── Retreats Page: Coming Soon ──
             'retreat.comingsoon': 'Weitere Retreats in Planung - stay tuned',
+            'retreat.coming.cta': 'Erfahre es als Erste',
 
             // ── Retreats Page: About Summary ──
             'retreat.about.label': '\u00DCBER DIESES RETREAT',
@@ -265,7 +266,7 @@
             'exp.closing.title': 'Das Gef\u00FChl, das bleibt',
             'exp.closing.text': 'Bewegung, echte Ern\u00E4hrung und Verbindung, die l\u00E4nger h\u00E4lt als ein Wochenende. Jede Mahlzeit war komplett glutenfrei, jeder Moment daf\u00FCr gemacht, dass du dich wieder wie du selbst f\u00FChlst. Das ist, was wir schaffen, und wir w\u00FCrden uns freuen, wenn du beim n\u00E4chsten Mal dabei bist.',
             'exp.cta.title': 'Sei beim n\u00E4chsten Mal dabei',
-            'exp.cta.button': 'Zur Warteliste'
+            'exp.cta.button': 'Erfahre es als Erste'
         }
     };
 
