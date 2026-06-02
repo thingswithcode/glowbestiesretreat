@@ -152,10 +152,14 @@
 
             // ── Retreats Page: Hero ──
             'retreat.hero.label': 'RETREATS',
-            'retreat.hero.title': 'The Alpine Reset',
+            'retreat.hero.title': 'Weitere Retreats sind in Planung',
             'retreat.hero.tagline': 'Bewegen. Resetten. Wiederfinden.',
             'retreat.hero.date': '29. - 31. Mai 2026',
             'retreat.hero.cta': 'Erfahre es als Erste',
+            'retreat.past.label': 'UNSER ERSTES RETREAT',
+            'retreat.past.title': 'The Alpine Reset',
+            'retreat.past.text': 'Unser erstes Retreat ist gelaufen: drei Tage Bewegung, komplett glutenfreie Ern\u00e4hrung und echte Verbindung in den Bergen \u00fcber dem Montafon. Sieh dir an, wie es sich angef\u00fchlt hat.',
+            'retreat.past.cta': 'So war es',
 
             // ── Retreats Page: Quick Facts ──
             'retreat.facts.location.label': 'Ort',
@@ -170,6 +174,9 @@
             // ── Retreats Page: Coming Soon ──
             'retreat.comingsoon': 'Weitere Retreats in Planung - stay tuned',
             'retreat.coming.cta': 'Erfahre es als Erste',
+            'retreat.coming.label': 'WAS KOMMT',
+            'retreat.coming.title': 'Weitere Retreats sind unterwegs.',
+            'retreat.coming.text': 'Neue Orte, neue Erlebnisse, gleiche Intention. Trag dich ein und erfahre als Erste, wenn wir unser n\u00e4chstes Retreat ank\u00fcndigen.',
 
             // ── Retreats Page: About Summary ──
             'retreat.about.label': '\u00DCBER DIESES RETREAT',
