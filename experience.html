@@ -16,6 +16,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?v=6">
+    <style>
+        .star-rating { display:flex; flex-direction:row-reverse; justify-content:center; gap:4px; border:0; padding:0; margin:0 auto 1.5rem; }
+        .star-rating input { display:none; }
+        .star-rating label { font-size:2rem; line-height:1; color:#D4CFC9; cursor:pointer; transition:color .15s ease; }
+        .star-rating label:hover, .star-rating label:hover ~ label, .star-rating input:checked ~ label { color:#B5635A; }
+        .review-form { max-width:560px; margin:2.5rem auto 0; }
+        .review-form textarea { width:100%; font-family:'Jost','Helvetica Neue',sans-serif; font-size:1rem; padding:14px 16px; border:1px solid rgba(58,53,49,0.15); border-radius:8px; resize:vertical; background:#fff; color:#3A3531; }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -224,6 +232,40 @@
                         <cite data-i18n="exp.quote3.name">Leonie</cite>
                     </blockquote>
                 </div>
+                <p style="text-align:center; margin-top:2.5rem;"><a href="#leave-review" class="btn btn-outline" data-i18n="exp.review.cta">Leave a review</a></p>
+            </div>
+        </section>
+
+        <!-- Leave a review (Netlify Forms) -->
+        <section class="section section-white" id="leave-review">
+            <div class="container">
+                <span class="section-label section-label-center" data-i18n="exp.review.label">SHARE YOUR EXPERIENCE</span>
+                <h2 class="section-title section-title-center" data-i18n="exp.review.title">Leave a review</h2>
+                <p class="exp-day-intro fade-in" data-i18n="exp.review.intro">Have you joined a Glow Besties retreat? We would love to hear how it felt. Reviews are checked before they appear on the site.</p>
+                <form class="signup-form review-form" name="review" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="review">
+                    <p class="form-hp" aria-hidden="true" style="display:none;"><label>Do not fill this out: <input name="bot-field"></label></p>
+                    <div class="form-group">
+                        <label for="review-name" class="sr-only">Name</label>
+                        <input type="text" id="review-name" name="name" placeholder="Your name" required aria-label="Your name" data-i18n-placeholder="exp.review.name">
+                    </div>
+                    <fieldset class="star-rating" aria-label="Your rating">
+                        <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">&#9733;</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">&#9733;</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">&#9733;</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">&#9733;</label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">&#9733;</label>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="review-text" class="sr-only">Review</label>
+                        <textarea id="review-text" name="review" rows="4" placeholder="Your review" required aria-label="Your review" data-i18n-placeholder="exp.review.text"></textarea>
+                    </div>
+                    <div class="form-group form-checkbox">
+                        <input type="checkbox" id="review-consent" name="consent" required>
+                        <label for="review-consent" data-i18n-html="exp.review.consent">I agree that my review and first name may be published on this website. See the <a href="datenschutz.html" target="_blank" rel="noopener">Privacy Policy</a>.</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit" data-i18n="exp.review.submit">Submit review</button>
+                </form>
             </div>
         </section>
 
