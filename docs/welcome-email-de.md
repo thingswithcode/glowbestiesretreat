@@ -47,6 +47,6 @@ Glow Besties Retreats
 
 ---
 
-### Bilder in der Mail (liegen live, laden automatisch)
-- Logo: https://glowbestiesretreats.com/images/Neu/neu_v2/logo.jpeg
-- Gruppenfoto-Banner: https://glowbestiesretreats.com/images/experience/hero.jpg
+### Bild in der Mail
+- Banner (Gruppenfoto mit Logo als Ebene im Korall-Ton): https://glowbestiesretreats.com/images/experience/hero-email.jpg
+- Hinweis: Dieses Banner-Bild ist neu und muss beim naechsten Website-Deploy mit hochgeladen werden, damit es in der Mail laedt. Bis dahin kann man es lokal unter images/experience/hero-email.jpg ansehen.
