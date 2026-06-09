@@ -15,15 +15,15 @@ Aufbau: Logo, Gruppenfoto vom Retreat, dann: wer wir sind, was wir machen, warum
 - Schön, dass du da bist
 
 ## Preheader (Vorschautext)
-Schön, dass du in unserer kleinen Community bist. Move. Nourish. Connect.
+Schön, dass du da bist.
 
 ---
 
 ## Text
 
-**Schön, dass du in unserer kleinen Community bist.**
+**Schön, dass du da bist.**
 
-Hallo [Vorname], vielen Dank für deine Anmeldung.
+Hallo [Vorname], schön, dass du in unserer kleinen Community bist. Vielen Dank für deine Anmeldung.
 
 Wir sind Eli und Leonie, die zwei Gründerinnen von Glow Besties. Wir kommen beide aus schnellen, fordernden Corporate-Jobs und wissen selbst, wie schwer es ist, wirklich abzuschalten und runterzukommen. Genau deshalb haben wir Glow Besties ins Leben gerufen: Retreats für Frauen, denen es genauso geht.
 
