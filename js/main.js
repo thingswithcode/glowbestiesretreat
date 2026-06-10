@@ -24,6 +24,44 @@
 
 
     /* --------------------------------------------------
+       2. Mobile hamburger menu
+          Injects a toggle button and opens/closes .nav-links
+    -------------------------------------------------- */
+    var navContainer = navbar ? navbar.querySelector('.nav-container') : null;
+    var navLinks = navbar ? navbar.querySelector('.nav-links') : null;
+
+    if (navContainer && navLinks) {
+        var navToggle = document.createElement('button');
+        navToggle.className = 'nav-toggle';
+        navToggle.setAttribute('type', 'button');
+        navToggle.setAttribute('aria-label', 'Menü öffnen');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.innerHTML = '<span></span><span></span><span></span>';
+        navContainer.appendChild(navToggle);
+
+        function setNavOpen(open) {
+            navbar.classList.toggle('nav-open', open);
+            navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            navToggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+        }
+
+        navToggle.addEventListener('click', function () {
+            setNavOpen(!navbar.classList.contains('nav-open'));
+        });
+
+        // Close after tapping a link
+        navLinks.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () { setNavOpen(false); });
+        });
+
+        // Reset when resizing up to desktop
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768) { setNavOpen(false); }
+        });
+    }
+
+
+    /* --------------------------------------------------
        3. Smooth scroll for anchor links
           Account for navbar height as offset
     -------------------------------------------------- */
