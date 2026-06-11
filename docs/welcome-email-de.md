@@ -33,7 +33,7 @@ Was uns besonders macht: Bei uns ist alles komplett glutenfrei. Leonie lebt selb
 
 Unser erstes Retreat, The Alpine Reset, liegt hinter uns: drei Tage Bewegung, Natur, gutes Essen und echte Verbindung in den Bergen über dem Montafon. Schau dir an, wie es war.
 
-**[ Unser letztes Retreat ansehen ]** (Button auf: https://glowbestiesretreats.com/experience.html)
+**[ The Alpine Reset entdecken ]** (Button auf: https://glowbestiesretreats.com/experience.html)
 
 Folg uns gern auf Instagram. Dort teilen wir Eindrücke von den Retreats, die nächsten Events, Rezepte und Behind-the-Scenes.
 
