@@ -25,7 +25,7 @@ Schön, dass du da bist.
 
 Hallo [Vorname], schön, dass du in unserer kleinen Community bist. Vielen Dank für deine Anmeldung.
 
-Wir sind Eli und Leonie, die zwei Gründerinnen von Glow Besties. Wir kommen beide aus schnellen, fordernden Corporate-Jobs und wissen selbst, wie schwer es ist, wirklich abzuschalten und runterzukommen. Genau deshalb haben wir Glow Besties ins Leben gerufen: Retreats für Frauen, denen es genauso geht.
+Wir sind Eli und Leonie, die zwei Gründerinnen von Glow Besties. Wir kommen beide aus schnellen, fordernden Corporate-Jobs und wissen selbst, wie schwer es ist, wirklich abzuschalten und runterzukommen. Genau deshalb haben wir Glow Besties ins Leben gerufen: Retreats für Frauen, die ständig 110% geben, immer für andere da sind und sich bewusst Zeit nehmen möchten, um wieder bei sich selbst anzukommen.
 
 Glow Besties steht für move, nourish, connect: für Frauen, die viel leisten und sich bewusst Zeit nehmen wollen, um wieder bei sich selbst anzukommen.
 
