@@ -15,7 +15,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=6">
+    <link rel="stylesheet" href="css/style.css?v=11">
+    <style>
+        .star-rating { display:flex; flex-direction:row-reverse; justify-content:center; gap:4px; border:0; padding:0; margin:0 auto 1.5rem; }
+        .star-rating input { display:none; }
+        .star-rating label { font-size:2rem; line-height:1; color:#D4CFC9; cursor:pointer; transition:color .15s ease; }
+        .star-rating label:hover, .star-rating label:hover ~ label, .star-rating input:checked ~ label { color:#B5635A; }
+        .review-form { max-width:560px; margin:2.5rem auto 0; }
+        .review-form textarea { width:100%; font-family:'Jost','Helvetica Neue',sans-serif; font-size:1rem; padding:14px 16px; border:1px solid rgba(58,53,49,0.15); border-radius:8px; resize:vertical; background:#fff; color:#3A3531; }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -166,8 +174,8 @@
                 <p class="exp-day-intro fade-in" data-i18n="exp.pause.text">We planned a lot, and we planned the pauses too. Between sessions there was always space to rest in the meadow, wander a little, or simply sit with the view. Those quiet moments mattered as much as everything on the schedule.</p>
                 <div class="exp-trio fade-in">
                     <img src="images/experience/free-1.jpg" alt="Free time in the alpine meadow" loading="lazy">
-                    <img src="images/experience/free-2.jpg" alt="A quiet moment in nature between sessions" loading="lazy">
                     <img src="images/experience/free-3.jpg" alt="Taking in the mountain views during free time" loading="lazy">
+                    <img src="images/experience/free-2.jpg" alt="A quiet moment in nature between sessions" loading="lazy">
                 </div>
             </div>
         </section>
@@ -189,6 +197,12 @@
                     <img src="images/experience/sun-fascia-2.jpg" alt="A movement session in the studio" loading="lazy">
                     <img src="images/experience/gal-4.jpg" alt="A cow in the alpine meadow" loading="lazy">
                     <img src="images/experience/gal-7.jpg" alt="The movement and yoga space" loading="lazy">
+                    <img src="images/experience/gal-goodie-bag.jpg" alt="Glow Besties tote bags and notebooks in the room" loading="lazy">
+                    <img src="images/experience/gal-window-view.jpg" alt="Two guests by the window with the mountain view" loading="lazy">
+                    <img src="images/experience/gal-dinner-buffet.jpg" alt="The gluten-free dinner buffet outdoors" loading="lazy">
+                    <img src="images/experience/gal-yoga-barn.jpg" alt="The open yoga barn with mats and mountain view" loading="lazy">
+                    <img src="images/experience/gal-journaling.jpg" alt="A quiet journaling moment on the mat" loading="lazy">
+                    <img src="images/experience/gal-terrace-view.jpg" alt="Taking in the mountain air from the terrace" loading="lazy">
                 </div>
             </div>
         </section>
@@ -205,25 +219,62 @@
             </div>
         </section>
 
-        <!-- Testimonials (PLACEHOLDER quotes, replace with real ones before publishing) -->
+        <!-- Testimonials (real guest reviews) -->
         <section class="section section-beige" id="exp-quotes">
             <div class="container">
                 <span class="section-label section-label-center" data-i18n="exp.quotes.label">IN THEIR WORDS</span>
                 <h2 class="section-title section-title-center" data-i18n="exp.quotes.title">What the girls said</h2>
                 <div class="exp-testimonials fade-in">
                     <blockquote class="exp-quote">
-                        <p data-i18n="exp.quote1.text">I arrived not knowing anyone and left with a group of women I want to keep in my life.</p>
-                        <cite data-i18n="exp.quote1.name">Lucy</cite>
+                        <span class="exp-quote-stars" aria-label="Five out of five stars">★★★★★</span>
+                        <p data-i18n="exp.quote1.text">From start to finish, everything was organised with incredible care and professionalism. You could feel in every detail how much heart and love went into this retreat. Thank you for an unforgettable weekend - I would join again in a heartbeat!</p>
+                        <cite data-i18n="exp.quote1.name">Paulina</cite>
                     </blockquote>
                     <blockquote class="exp-quote">
-                        <p data-i18n="exp.quote2.text">Three days that actually slowed my mind down. I came home lighter.</p>
+                        <span class="exp-quote-stars" aria-label="Five out of five stars">★★★★★</span>
+                        <p data-i18n="exp.quote2.text">Exactly what I needed - two days out of everyday life and into the mountains. What really impressed me was the attention to detail: from the goodies to the food, you could feel how much heart went into it. I'll definitely be back.</p>
                         <cite data-i18n="exp.quote2.name">Alice</cite>
                     </blockquote>
                     <blockquote class="exp-quote">
-                        <p data-i18n="exp.quote3.text">Everything was gluten-free and I never once had to worry about the food. That alone meant the world.</p>
-                        <cite data-i18n="exp.quote3.name">Leonie</cite>
+                        <span class="exp-quote-stars" aria-label="Five out of five stars">★★★★★</span>
+                        <p data-i18n="exp.quote3.text">The yoga retreat was the perfect little breather from everyday life. A relaxed, small group, so much attention to detail, stunning nature and lovely takeaways for daily life. My highlight was the meditation by the fire and the morning sessions - starting the day so mindfully and calmly did me so much good.</p>
+                        <cite data-i18n="exp.quote3.name">Birte</cite>
                     </blockquote>
                 </div>
+                <p style="text-align:center; margin-top:2.5rem;"><a href="#leave-review" class="btn btn-outline" data-i18n="exp.review.cta">Leave a review</a></p>
+            </div>
+        </section>
+
+        <!-- Leave a review (Netlify Forms) -->
+        <section class="section section-white" id="leave-review">
+            <div class="container">
+                <span class="section-label section-label-center" data-i18n="exp.review.label">SHARE YOUR EXPERIENCE</span>
+                <h2 class="section-title section-title-center" data-i18n="exp.review.title">Leave a review</h2>
+                <p class="exp-day-intro fade-in" data-i18n="exp.review.intro">Have you joined a Glow Besties retreat? We would love to hear how it felt. Reviews are checked before they appear on the site.</p>
+                <form class="signup-form review-form" name="review" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="review">
+                    <p class="form-hp" aria-hidden="true" style="display:none;"><label>Do not fill this out: <input name="bot-field"></label></p>
+                    <div class="form-group">
+                        <label for="review-name" class="sr-only">Name</label>
+                        <input type="text" id="review-name" name="name" placeholder="Your name" required aria-label="Your name" data-i18n-placeholder="exp.review.name">
+                    </div>
+                    <fieldset class="star-rating" aria-label="Your rating">
+                        <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">&#9733;</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">&#9733;</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">&#9733;</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">&#9733;</label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">&#9733;</label>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="review-text" class="sr-only">Review</label>
+                        <textarea id="review-text" name="review" rows="4" placeholder="Your review" required aria-label="Your review" data-i18n-placeholder="exp.review.text"></textarea>
+                    </div>
+                    <div class="form-group form-checkbox">
+                        <input type="checkbox" id="review-consent" name="consent" required>
+                        <label for="review-consent" data-i18n-html="exp.review.consent">I agree that my review and first name may be published on this website. See the <a href="datenschutz.html" target="_blank" rel="noopener">Privacy Policy</a>.</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit" data-i18n="exp.review.submit">Submit review</button>
+                </form>
             </div>
         </section>
 
@@ -264,7 +315,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=7"></script>
     <script src="js/i18n.js"></script>
 </body>
 </html>

@@ -514,7 +514,42 @@ button:focus-visible {
     border-color: var(--color-text-light);
 }
 
-/* Mobile nav — always visible, no hamburger */
+/* Hamburger toggle (injected by JS, shown on mobile) */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-left: 12px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    border-radius: 2px;
+    transition: transform 0.3s var(--ease-elegant), opacity 0.2s ease, background-color 0.3s ease;
+}
+
+.navbar.scrolled .nav-toggle span,
+.navbar.navbar-light .nav-toggle span,
+.navbar.nav-open .nav-toggle span {
+    background-color: var(--color-text-heading);
+}
+
+.navbar.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.navbar.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+.navbar.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile nav — hamburger dropdown */
 @media (max-width: 768px) {
     .navbar {
         height: var(--navbar-height-mobile);
@@ -524,62 +559,64 @@ button:focus-visible {
         height: 40px;
     }
 
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .navbar.nav-open {
+        background-color: var(--color-bg-beige);
+        box-shadow: 0 1px 20px rgba(58, 53, 49, 0.1);
+    }
+
     .nav-links {
-        gap: 14px;
+        position: fixed;
+        top: var(--navbar-height-mobile);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background-color: var(--color-bg-beige);
+        box-shadow: 0 14px 24px rgba(58, 53, 49, 0.12);
+        padding: 6px 0 14px;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: max-height 0.35s var(--ease-elegant), opacity 0.25s ease;
+    }
+
+    .navbar.nav-open .nav-links {
+        max-height: calc(100vh - var(--navbar-height-mobile));
+        overflow-y: auto;
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .nav-links a {
-        font-size: 0.72rem;
-        letter-spacing: 0.02em;
+        color: var(--color-text-heading);
+        font-size: 1rem;
+        letter-spacing: 0.04em;
+        padding: 14px 28px;
     }
 
     .navbar.scrolled .nav-links a,
     .navbar.navbar-light .nav-links a {
         color: var(--color-text-heading);
-    }
-
-    .navbar.scrolled .nav-cta,
-    .navbar.navbar-light .nav-cta {
-        border-color: var(--color-accent);
-        color: var(--color-accent) !important;
     }
 
     .nav-links a::after {
         display: none;
     }
 
-    .nav-cta {
-        padding: 7px 14px;
-        font-size: 0.7rem;
-    }
-
-    .nav-lang {
-        font-size: 0.6rem;
-        padding: 3px 6px;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-links {
-        gap: 8px;
-    }
-
-    .nav-links a {
-        font-size: 0.65rem;
-    }
-
-    .navbar.scrolled .nav-links a,
-    .navbar.navbar-light .nav-links a {
-        color: var(--color-text-heading);
-    }
-
-    .nav-cta {
-        padding: 6px 10px;
-        font-size: 0.65rem;
-    }
-
-    .nav-logo img {
-        height: 34px;
+    .nav-cta,
+    .navbar.scrolled .nav-cta,
+    .navbar.navbar-light .nav-cta {
+        margin: 10px 28px 4px;
+        padding: 12px 24px;
+        text-align: center;
+        border-color: var(--color-accent);
+        color: var(--color-accent) !important;
     }
 }
 
@@ -2062,6 +2099,60 @@ button:focus-visible {
     }
 }
 
+/* About full-bleed hero (mirrors .retreat-hero-full) */
+.about-hero-full {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.about-hero-full .hero-bg {
+    position: absolute;
+    inset: -40px;
+    background-size: cover;
+    background-position: center 15%;
+}
+
+.about-hero-full .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(58, 53, 49, 0.1) 0%,
+        rgba(58, 53, 49, 0.55) 100%
+    );
+}
+
+.about-hero-full-content {
+    position: relative;
+    z-index: 2;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: calc(var(--navbar-height) + 60px) var(--container-padding) 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.about-hero-full-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 400;
+    color: var(--color-white);
+    letter-spacing: -0.02em;
+    margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+    .about-hero-full {
+        min-height: 72vh;
+    }
+    .about-hero-full-content {
+        padding: calc(var(--navbar-height-mobile) + 48px) var(--container-padding) 48px;
+    }
+}
+
 
 /* ============================================
    23. ABOUT PAGE — FOUNDER SECTION
@@ -2928,6 +3019,7 @@ button:focus-visible {
 .exp-testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 3rem; }
 .exp-quote { margin: 0; padding: 2rem; background: var(--color-white, #fff); border-radius: 12px; }
 .exp-quote p { font-family: var(--font-serif, 'Cormorant Garamond', serif); font-style: italic; font-size: 1.3rem; line-height: 1.5; margin: 0 0 1rem; }
+.exp-quote-stars { display: block; color: #B5635A; font-size: 0.95rem; letter-spacing: 0.15em; margin-bottom: 1rem; }
 .exp-quote cite { font-family: var(--font-sans, 'Jost', sans-serif); font-style: normal; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
 
 /* -- Experience page: full-width image band -- */
