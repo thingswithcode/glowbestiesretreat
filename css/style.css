@@ -2102,7 +2102,7 @@ button:focus-visible {
 /* About full-bleed hero (mirrors .retreat-hero-full) */
 .about-hero-full {
     position: relative;
-    min-height: 70vh;
+    min-height: 88vh;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
@@ -2146,7 +2146,7 @@ button:focus-visible {
 
 @media (max-width: 768px) {
     .about-hero-full {
-        min-height: 60vh;
+        min-height: 72vh;
     }
     .about-hero-full-content {
         padding: calc(var(--navbar-height-mobile) + 48px) var(--container-padding) 48px;
