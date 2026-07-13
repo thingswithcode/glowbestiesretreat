@@ -373,10 +373,42 @@ button:focus-visible {
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* Soft top scrim so the transparent navbar stays legible over any hero image.
+   Fades out once the navbar gains its beige background (scrolled / light pages). */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150%;
+    background: linear-gradient(to bottom, rgba(40, 35, 30, 0.32), rgba(40, 35, 30, 0));
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.navbar.scrolled::before,
+.navbar.navbar-light::before {
+    opacity: 0;
+}
+
 .navbar.scrolled,
 .navbar.navbar-light {
     background-color: var(--color-bg-beige);
     box-shadow: 0 1px 20px rgba(58, 53, 49, 0.1);
+}
+
+/* While the navbar is transparent (over a hero image), render the logo white
+   so it reads clearly; brightness(0) invert(1) forces any color to solid white.
+   Once the navbar turns beige (scrolled / light pages), restore the coral logo. */
+.nav-logo img {
+    filter: brightness(0) invert(1) drop-shadow(0 1px 4px rgba(30, 25, 20, 0.35));
+}
+
+.navbar.scrolled .nav-logo img,
+.navbar.navbar-light .nav-logo img {
+    filter: none;
 }
 
 .nav-container {
@@ -421,10 +453,11 @@ button:focus-visible {
 
 .nav-links a {
     font-family: var(--font-body);
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 400;
     letter-spacing: 0.04em;
     color: var(--color-white);
+    text-shadow: 0 1px 4px rgba(30, 25, 20, 0.35);
     transition: color var(--transition-base);
     position: relative;
 }
@@ -432,6 +465,7 @@ button:focus-visible {
 .navbar.scrolled .nav-links a,
 .navbar.navbar-light .nav-links a {
     color: var(--color-text-heading);
+    text-shadow: none;
 }
 
 .nav-links a:hover {
@@ -594,6 +628,7 @@ button:focus-visible {
     }
 
     .nav-links a {
+        display: block;
         color: var(--color-text-heading);
         font-size: 1rem;
         letter-spacing: 0.04em;
@@ -3022,14 +3057,29 @@ button:focus-visible {
 .exp-quote-stars { display: block; color: #B5635A; font-size: 0.95rem; letter-spacing: 0.15em; margin-bottom: 1rem; }
 .exp-quote cite { font-family: var(--font-sans, 'Jost', sans-serif); font-style: normal; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
 
+/* Homepage reviews sit on a white section, so give the cards a hairline
+   border + soft lift to stay distinct from the section behind them. */
+#reviews .exp-quote { border: 1px solid var(--color-border-subtle); box-shadow: 0 8px 24px rgba(58, 53, 49, 0.05); }
+
 /* -- Experience page: full-width image band -- */
 .exp-band { position: relative; height: 62vh; min-height: 360px; background-size: cover; background-position: center; }
 
 /* -- Experience page: asymmetric (masonry) gallery -- */
 .exp-masonry { column-count: 3; column-gap: 14px; margin-top: 3rem; }
-.exp-masonry img { width: 100%; margin: 0 0 14px; border-radius: 8px; display: block; break-inside: avoid; }
+.exp-masonry img { width: 100%; margin: 0 0 14px; border-radius: 8px; display: block; break-inside: avoid; cursor: pointer; }
 @media (max-width: 900px) { .exp-masonry { column-count: 2; } }
 @media (max-width: 560px) { .exp-masonry { column-count: 1; } }
+
+/* -- Experience page: gallery lightbox -- */
+.lightbox { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(20, 18, 16, 0.92); align-items: center; justify-content: center; }
+.lightbox.is-open { display: flex; }
+.lightbox-img { max-width: 90vw; max-height: 86vh; border-radius: 4px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); user-select: none; }
+.lightbox-close, .lightbox-prev, .lightbox-next { position: absolute; background: transparent; border: 0; color: var(--color-white, #fff); font-size: 2rem; line-height: 1; cursor: pointer; padding: 12px; opacity: 0.85; transition: opacity var(--transition-base, 0.3s ease); }
+.lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover { opacity: 1; }
+.lightbox-close { top: 16px; right: 16px; font-size: 2.4rem; }
+.lightbox-prev { left: 8px; top: 50%; transform: translateY(-50%); font-size: 1.4rem; }
+.lightbox-next { right: 8px; top: 50%; transform: translateY(-50%); font-size: 1.4rem; }
+@media (max-width: 560px) { .lightbox-prev, .lightbox-next { padding: 8px; font-size: 1.1rem; } .lightbox-close { top: 8px; right: 8px; } }
 
 /* -- Experience page: zig-zag rows spacing -- */
 .exp-day-intro { max-width: 720px; margin: 1rem auto 0; text-align: center; }
