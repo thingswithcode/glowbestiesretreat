@@ -26,11 +26,10 @@
             'intro.p3': 'Verankert in Bewegung, Ern\u00E4hrung und echter Erholung konzentrieren wir uns auf das, was dir langfristig wirklich guttut.',
 
             // ── Retreat Teaser (homepage) ──
-            'retreatteaser.label': 'N\u00C4CHSTES RETREAT',
-            'retreatteaser.tagline': 'Ein paar Tage zum Resetten, Bewegen und Wiederfinden',
-            'retreatteaser.title': 'The Alpine Reset',
-            'retreatteaser.date': '29.-31. Mai 2026',
-            'retreatteaser.cta': 'Retreat ansehen',
+            'retreatteaser.label': 'STAY TUNED',
+            'retreatteaser.tagline': 'Unser erstes Alpine Reset liegt hinter uns.',
+            'retreatteaser.title': 'Wir planen schon das n\u00E4chste Retreat',
+            'retreatteaser.cta': 'Erfahre es als Erste',
 
             // ── Philosophy ──
             'philosophy.label': 'UNSERE PHILOSOPHIE',
