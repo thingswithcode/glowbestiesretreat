@@ -14,7 +14,7 @@
             'nav.cta': 'Stay Tuned',
 
             // ── Hero (index.html) ──
-            'hero.title': 'Setze deinen K\u00F6rper zur\u00FCck - ohne dein Leben zu verlassen.',
+            'hero.title': 'Reset f\u00FCr deinen K\u00F6rper \u2013 ohne aus deinem Alltag auszusteigen.',
             'hero.subtitle': 'Strukturierte Retreats f\u00FCr Frauen, die viel leisten und einen Reset brauchen, der wirklich wirkt.',
             'hero.cta': 'Erfahre es als Erste',
             'hero.trust': 'Unser erstes Retreat ist gelaufen. Das n\u00e4chste kommt.',

@@ -762,7 +762,8 @@ button:focus-visible {
     font-size: 0.8rem;
     font-weight: 400;
     letter-spacing: 0.08em;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 0 1px 8px rgba(20, 18, 16, 0.55);
     margin-top: 24px;
     opacity: 0;
     transform: translateY(15px);
@@ -3002,7 +3003,9 @@ button:focus-visible {
     font-family: var(--font-sans, 'Jost', sans-serif);
     font-size: 0.85rem;
     letter-spacing: 0.08em;
-    opacity: 0.85;
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 0 1px 8px rgba(20, 18, 16, 0.55);
+    opacity: 1;
 }
 
 /* -- Blog Index -- */
