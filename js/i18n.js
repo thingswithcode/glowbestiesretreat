@@ -102,6 +102,18 @@
             'glutenfree.badge': '100% Glutenfrei',
             'hero.glutenfree': '100% glutenfrei, von Grund auf',
 
+            // FAQ (homepage)
+            'faq.label': 'GUT ZU WISSEN',
+            'faq.title': 'Häufige Fragen',
+            'faq.q1': 'Ist es wirklich 100% glutenfrei?',
+            'faq.a1': 'Ja, alles. Jede Mahlzeit, jeder Snack, jedes Getränk beim Retreat ist glutenfrei. Leonie, eine von uns beiden, lebt mit Zöliakie. Das ist bei uns keine Option, die man dazubucht, sondern die Grundlage vom ganzen Wochenende: keine geteilten Flächen mit Gluten, kein „wird schon passen", keine Ausnahmen.',
+            'faq.q2': 'Für wen ist das?',
+            'faq.a2': 'Für Frauen, die auf Vollgas laufen. Fordernde Jobs, hartes Training, volle Leben, und das Bedürfnis nach ein paar Tagen zum Abschalten, ohne den Anschluss zu verlieren. Du musst nicht sportlich sein oder Yoga machen. Du musst dir die Auszeit nur wünschen.',
+            'faq.q3': 'Wo findet es statt?',
+            'faq.a3': 'In den österreichischen Alpen, über dem Montafon in Vorarlberg. Der Ort heißt Tanafreida, ein kleines Bergrefugium auf gut 1.000 Metern: ruhig, abgelegen, und ringsum nur Berge und sonst nicht viel.',
+            'faq.q4': 'Brauche ich Retreat- oder Yoga-Erfahrung?',
+            'faq.a4': 'Nein. Die meisten kommen allein und waren noch nie auf einem Retreat. Nichts ist Pflicht und nichts wird gehetzt. Du machst so viel oder so wenig, wie dir danach ist.',
+
             // ── Footer ──
             'footer.logo': 'Glow Besties Retreats',
             'footer.tagline': 'move \u00B7 nourish \u00B7 connect',
