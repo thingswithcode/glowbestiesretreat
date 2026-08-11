@@ -120,6 +120,12 @@
             'faq.q4': 'Brauche ich Retreat- oder Yoga-Erfahrung?',
             'faq.a4': 'Nein. Die meisten kommen allein und waren noch nie auf einem Retreat. Nichts ist Pflicht und nichts wird gehetzt. Du machst so viel oder so wenig, wie dir danach ist.',
 
+            // Journal / Blog teaser (homepage)
+            'journal.label': 'DAS JOURNAL',
+            'journal.title': 'Lies dich schon mal ein',
+            'journal.read': 'Lesen',
+            'journal.cta': 'Alle Artikel',
+
             // ── Footer ──
             'footer.logo': 'Glow Besties Retreats',
             'footer.tagline': 'move \u00B7 nourish \u00B7 connect',
