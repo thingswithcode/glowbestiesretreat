@@ -108,7 +108,7 @@
             'faq.q1': 'Ist es wirklich 100% glutenfrei?',
             'faq.a1': 'Ja, alles. Jede Mahlzeit, jeder Snack, jedes Getränk beim Retreat ist glutenfrei. Leonie, eine von uns beiden, lebt mit Zöliakie. Das ist bei uns keine Option, die man dazubucht, sondern die Grundlage vom ganzen Wochenende: keine geteilten Flächen mit Gluten, kein „wird schon passen", keine Ausnahmen.',
             'faq.q2': 'Für wen ist das?',
-            'faq.a2': 'Für Frauen, die auf Vollgas laufen. Fordernde Jobs, hartes Training, volle Leben, und das Bedürfnis nach ein paar Tagen zum Abschalten, ohne den Anschluss zu verlieren. Du musst nicht sportlich sein oder Yoga machen. Du musst dir die Auszeit nur wünschen.',
+            'faq.a2': 'Für Frauen, die auf Vollgas laufen. Fordernde Jobs, hartes Training, volle Leben, und das Bedürfnis, abzuschalten, ohne den Anschluss zu verlieren. Wenn dir deine langfristige Gesundheit wichtig ist und du ein paar echte Tage raus willst, nicht nur noch einen Urlaub, dann ist das für dich. Sportlichkeit oder Yoga-Erfahrung brauchst du nicht.',
             'faq.q3': 'Wo findet es statt?',
             'faq.a3': 'Der Ort wechselt. Für jedes Retreat suchen wir uns einen neuen Platz, damit jedes seine eigene Reise ist. Das erste war in den österreichischen Alpen, in Tanafreida über dem Montafon in Vorarlberg. Das nächste ist schon in Planung, an einem neuen Ort.',
             'faq.q5': 'Wann ist das nächste?',
@@ -118,7 +118,7 @@
             'faq.q7': 'Geht auch andere Ernährung außer glutenfrei?',
             'faq.a7': 'Ja. Alles ist grundsätzlich glutenfrei, und darüber hinaus kochen wir nach dem, was du brauchst, ob vegan, vegetarisch, pescetarisch oder ganz ohne Einschränkung. Sag uns einfach Bescheid, wenn du dich anmeldest.',
             'faq.q4': 'Brauche ich Retreat- oder Yoga-Erfahrung?',
-            'faq.a4': 'Nein. Die meisten kommen allein und waren noch nie auf einem Retreat. Nichts ist Pflicht und nichts wird gehetzt. Du machst so viel oder so wenig, wie dir danach ist.',
+            'faq.a4': 'Nein. Die Sessions umfassen Bewegung (Pilates, Mobility, Wandern, leichtes Laufen), Breathwork und Reflexion und funktionieren auf jedem Level. Die meisten kommen allein und waren noch nie auf einem Retreat. Nichts ist Pflicht und nichts wird gehetzt, du machst so viel oder so wenig, wie dir danach ist.',
 
             // Journal / Blog teaser (homepage)
             'journal.label': 'DAS JOURNAL',
