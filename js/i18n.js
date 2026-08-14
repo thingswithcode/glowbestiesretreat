@@ -100,6 +100,7 @@
             'glutenfree.p1': 'Jede Mahlzeit bei unseren Retreats ist zu 100% glutenfrei. Nicht als Zusatz oder Sonderwunsch, sondern von Grund auf so gedacht.',
             'glutenfree.p2': 'Unsere Mitgr\u00FCnderin Leonie lebt mit Z\u00F6liakie, deshalb haben wir das ganze Erlebnis rund um Essen gebaut, das sicher, n\u00E4hrend und richtig gut ist. Keine Sorge vor Spuren, keine Kompromisse, kein Au\u00DFenvor-Sein.',
             'glutenfree.badge': '100% Glutenfrei',
+            'glutenfree.readmore': 'Lesen: Warum jedes Retreat komplett glutenfrei ist',
             'hero.glutenfree': '100% glutenfrei, von Grund auf',
 
             // FAQ (homepage)
